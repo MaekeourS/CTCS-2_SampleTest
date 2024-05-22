@@ -22,8 +22,8 @@ namespace CTCS_test
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
-        int V = 0;
-        int Xp = 200;
+        double V = 250;
+        int Xp = 1000;
         int Yp = 342;
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -587,7 +587,8 @@ namespace CTCS_test
 
         private void Train1_EnabledChanged(object sender, EventArgs e)
         {
-            int Brake = 0,i;
+            double Brake = 0;
+            int i;
             if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else Occupy[0] = 0;
             if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else Occupy[1] = 0;
             if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else Occupy[2] = 0;
@@ -623,6 +624,11 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         if (V > 130) V = 130;
+                        if (Xp >= 1500 && Xp <= 1645 && V<=20)
+                        {
+                            Brake = 0;
+                            V = 20;
+                        }
                     }
                     break;
                 }
@@ -648,7 +654,7 @@ namespace CTCS_test
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Interval = 20000/(V+1);
+            timer2.Interval = (int)(20000/(V+1));
             if (timer2.Interval>1000)timer2.Interval = 1000;
             Xp++;
             Train1.Location = new Point(Xp, Yp);
@@ -666,7 +672,7 @@ namespace CTCS_test
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Enabled = !timer1.Enabled;
-            if(V!=0)timer2.Enabled = !timer2.Enabled;
+            if(V>0.1)timer2.Enabled = !timer2.Enabled;
             if (timer1.Enabled) button2.Text = "暂停"; else button2.Text = "继续";
         }
 
@@ -678,11 +684,11 @@ namespace CTCS_test
             CodeNum[19] = Codes.HU;
             CodeNum[18] = Codes.U;
             CodeNum[17] = Codes.LU;
-            /*CodeNum[16] = Codes.L;
+            CodeNum[16] = Codes.L;
             CodeNum[15] = Codes.HU;
             CodeNum[14] = Codes.U;
-            CodeNum[13] = Codes.LU;*/
-            for (int i = 16; i >= 0; i--)
+            CodeNum[13] = Codes.LU;
+            for (int i = 12; i >= 0; i--)
             {
                 if (CodeNum[i + 1] < Codes.L5)
                 {
