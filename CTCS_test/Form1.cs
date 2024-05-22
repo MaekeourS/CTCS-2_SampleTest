@@ -682,13 +682,20 @@ namespace CTCS_test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = !timer1.Enabled;
-            if(V>0.1)timer2.Enabled = !timer2.Enabled;
-            if (timer1.Enabled) button2.Text = "暂停";
+            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton4.Checked)
+            {
+                MessageBox.Show("未选择接发车模式","错误！");
+            }
             else
             {
-                button2.Text = "继续";
-                label1.Text = "暂停中";
+                timer1.Enabled = !timer1.Enabled;
+                if (V > 0.1) timer2.Enabled = !timer2.Enabled;
+                if (timer1.Enabled) button2.Text = "暂停";
+                else
+                {
+                    button2.Text = "继续";
+                    label1.Text = "暂停中";
+                }
             }
 
         }
