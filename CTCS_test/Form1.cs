@@ -23,9 +23,9 @@ namespace CTCS_test
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
         double V = 250;
-        int Xp = 1000;
+        int Xp = 1200;
         int Yp = 342;
-
+        bool side1 = false, side2 = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
             for (int i = 21; i >= 0; i--)
@@ -624,7 +624,7 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         if (V > 130) V = 130;
-                        if (Xp >= 1500 && Xp <= 1645 && V<=20)
+                        if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU) && Xp <= 1645 && V<=20)
                         {
                             Brake = 0;
                             V = 20;
@@ -635,6 +635,8 @@ namespace CTCS_test
             }
             V -= Brake;
             if(CodeNum[i + 1] >= Codes.L && V<250) V +=1;
+            if (Type[i] == Types.ZXZX || Type[i] == Types.ZXCX) side1 = false; else side1 = true;
+            if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
             if (V <= 0)
             {
@@ -650,6 +652,10 @@ namespace CTCS_test
             label1.Text = "Speed:" + V.ToString() + "km/h";
             button3.PerformClick();
             //CodeNum[5] = Codes.LU;
+            for(int i = 22; i >= 0; i--)
+            {
+                Type[i] = Types.ZXCX;
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -657,6 +663,7 @@ namespace CTCS_test
             timer2.Interval = (int)(20000/(V+1));
             if (timer2.Interval>1000)timer2.Interval = 1000;
             Xp++;
+            if (Xp >= 1540 && Xp <= 1579 && side2) Yp-=2;
             Train1.Location = new Point(Xp, Yp);
         }
 
@@ -673,7 +680,13 @@ namespace CTCS_test
         {
             timer1.Enabled = !timer1.Enabled;
             if(V>0.1)timer2.Enabled = !timer2.Enabled;
-            if (timer1.Enabled) button2.Text = "暂停"; else button2.Text = "继续";
+            if (timer1.Enabled) button2.Text = "暂停";
+            else
+            {
+                button2.Text = "继续";
+                label1.Text = "暂停中";
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -682,13 +695,10 @@ namespace CTCS_test
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
-            CodeNum[18] = Codes.U;
-            CodeNum[17] = Codes.LU;
-            CodeNum[16] = Codes.L;
-            CodeNum[15] = Codes.HU;
-            CodeNum[14] = Codes.U;
-            CodeNum[13] = Codes.LU;
-            for (int i = 12; i >= 0; i--)
+            CodeNum[18] = Codes.UU;
+            CodeNum[17] = Codes.U2;
+            CodeNum[16] = Codes.LU;
+            for (int i = 15; i >= 0; i--)
             {
                 if (CodeNum[i + 1] < Codes.L5)
                 {

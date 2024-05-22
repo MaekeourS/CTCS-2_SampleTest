@@ -593,7 +593,7 @@
             // 
             this.Train1.BackgroundImage = global::CTCS_test.Properties.Resources.train;
             this.Train1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Train1.Location = new System.Drawing.Point(1628, 343);
+            this.Train1.Location = new System.Drawing.Point(1497, 339);
             this.Train1.Name = "Train1";
             this.Train1.Size = new System.Drawing.Size(51, 10);
             this.Train1.TabIndex = 42;
