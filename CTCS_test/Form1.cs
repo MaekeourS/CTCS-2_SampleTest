@@ -652,10 +652,7 @@ namespace CTCS_test
             label1.Text = "Speed:" + V.ToString() + "km/h";
             button3.PerformClick();
             //CodeNum[5] = Codes.LU;
-            for(int i = 22; i >= 0; i--)
-            {
-                Type[i] = Types.ZXCX;
-            }
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -674,6 +671,13 @@ namespace CTCS_test
             Yp = 342;
             Train1.Location = new Point(Xp, Yp);
             button3.PerformClick();
+            for (int i = 22; i >= 0; i--)
+            {
+                if (radioButton1.Checked) Type[i] = Types.ZXZX;
+                if (radioButton2.Checked) Type[i] = Types.ZXCX;
+                if (radioButton3.Checked) Type[i] = Types.CXZX;
+                if (radioButton4.Checked) Type[i] = Types.CXCX;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -689,8 +693,36 @@ namespace CTCS_test
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void radioButton1_Click(object sender, EventArgs e)
         {
+            for (int i = 22; i >= 0; i--) Type[i] = Types.ZXZX;
+            CodeNum[22] = Codes.HU;
+            CodeNum[21] = Codes.HU;
+            CodeNum[20] = Codes.HU;
+            CodeNum[19] = Codes.HU;
+            CodeNum[18] = Codes.U;
+            CodeNum[17] = Codes.LU;
+            //CodeNum[16] = Codes.LU;
+            for (int i = 16; i >= 0; i--)
+            {
+                if (CodeNum[i + 1] < Codes.L5)
+                {
+                    CodeNum[i] = CodeNum[i + 1] + 1;
+                }
+                else
+                {
+                    CodeNum[i] = Codes.L5;
+                }
+            }
+        }
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+            for (int i = 22; i >= 0; i--) Type[i] = Types.CXZX;
+        }
+
+        private void radioButton3_Click(object sender, EventArgs e)
+        {
+            for (int i = 22; i >= 0; i--) Type[i] = Types.ZXCX;
             CodeNum[22] = Codes.HU;
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
@@ -709,6 +741,19 @@ namespace CTCS_test
                     CodeNum[i] = Codes.L5;
                 }
             }
+        }
+
+        private void radioButton4_Click(object sender, EventArgs e)
+        {
+            for (int i = 22; i >= 0; i--) Type[i] = Types.CXCX;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked) radioButton1.PerformClick();
+            if (radioButton2.Checked) radioButton2.PerformClick();
+            if (radioButton3.Checked) radioButton3.PerformClick();
+            if (radioButton4.Checked) radioButton4.PerformClick();
         }
     }
 }
