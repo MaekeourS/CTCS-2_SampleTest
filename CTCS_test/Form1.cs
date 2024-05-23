@@ -22,9 +22,9 @@ namespace CTCS_test
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
-        double V = 250;
-        int Xp = 1200;
-        int Yp = 342;
+        double V = 0;
+        int Xp = 200;
+        int Yp = 343;
         bool side1 = false, side2 = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -425,6 +425,7 @@ namespace CTCS_test
             else if (CodeNum[2] == Codes.LU) Light1.BackgroundImage = CTCS_test.Properties.Resources.LU;
             else Light1.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
+
         private void Light2_EnabledChanged(object sender, EventArgs e)
         {
             if (CodeNum[2] == Codes.HU) Light2.BackgroundImage = CTCS_test.Properties.Resources.H;
@@ -434,6 +435,7 @@ namespace CTCS_test
             else if (CodeNum[2] == Codes.LU) Light2.BackgroundImage = CTCS_test.Properties.Resources.LU;
             else Light2.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
+
         private void Light3_EnabledChanged(object sender, EventArgs e)
         {
             if (CodeNum[4] == Codes.HU) Light3.BackgroundImage = CTCS_test.Properties.Resources.H;
@@ -615,7 +617,7 @@ namespace CTCS_test
                 if (Occupy[i] == 1)
                 {
                     if (CodeNum[i + 1] == Codes.LU) Brake = 1;
-                    if ((CodeNum[i + 1] == Codes.U )||( CodeNum[i + 1] == Codes.U2 )||( CodeNum[i + 1] == Codes.UU))
+                    if ((CodeNum[i + 1] == Codes.U )||( CodeNum[i + 1] == Codes.U2 )||( CodeNum[i + 1] == Codes.UU && Xp>299))
                     {
                         Brake = 1;
                         if (V > 200) V = 200;
@@ -634,7 +636,7 @@ namespace CTCS_test
                 }
             }
             V -= Brake;
-            if(CodeNum[i + 1] >= Codes.L && V<250) V +=1;
+            if((CodeNum[i + 1] >= Codes.L || (Xp<299 && CodeNum[i + 1] == Codes.UU)) && V<250) V +=1;
             if (Type[i] == Types.ZXZX || Type[i] == Types.ZXCX) side1 = false; else side1 = true;
             if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
@@ -660,10 +662,10 @@ namespace CTCS_test
             timer2.Interval = (int)(20000/(V+1));
             if (timer2.Interval>1000)timer2.Interval = 1000;
             Xp++;
-            if (Xp >= 250 && Xp <= 299 && side1) Yp += 2;
+            if (Xp >= 250 && Xp <= 295 && side1) Yp += 2;
             if (Xp >= 1540 && Xp <= 1580 && side2) Yp -= 2;
-            if (Xp > 299 && Xp < 1540)Yp = 344;
-            if (Xp < 250 || Xp > 1580) Yp = 262;
+            if (Yp>343)Yp = 343;
+            if (Yp<262) Yp = 262;
             Train1.Location = new Point(Xp, Yp);
         }
 
@@ -686,12 +688,12 @@ namespace CTCS_test
                 }
                 V = 0;
                 Xp = 200;
-                if (Type[2] == Types.ZXZX || Type[2] == Types.ZXCX) Yp = 344;
+                if (Type[2] == Types.ZXZX || Type[2] == Types.ZXCX) Yp = 343;
                 else Yp = 262;
                 Train1.Location = new Point(Xp, Yp);
                 timer1.Enabled = true;
                 timer2.Enabled = true;
-
+                button2.Text = "暂停";
             }
 
         }
@@ -733,6 +735,7 @@ namespace CTCS_test
                 }
             }
         }
+
         private void radioButton2_Click(object sender, EventArgs e)
         {
             for (int i = 22; i >= 0; i--) Type[i] = Types.CXZX;
@@ -743,7 +746,7 @@ namespace CTCS_test
             CodeNum[18] = Codes.U;
             CodeNum[17] = Codes.LU;
             //CodeNum[16] = Codes.LU;
-            for (int i = 16; i >= 0; i--)
+            for (int i = 16; i >= 3; i--)
             {
                 if (CodeNum[i + 1] < Codes.L5)
                 {
@@ -754,6 +757,9 @@ namespace CTCS_test
                     CodeNum[i] = Codes.L5;
                 }
             }
+            CodeNum[2] = Codes.UU;
+            CodeNum[1] = Codes.UU;
+            CodeNum[0] = Codes.UU;
         }
 
         private void radioButton3_Click(object sender, EventArgs e)
@@ -789,7 +795,7 @@ namespace CTCS_test
             CodeNum[18] = Codes.UU;
             CodeNum[17] = Codes.U2;
             CodeNum[16] = Codes.LU;
-            for (int i = 15; i >= 0; i--)
+            for (int i = 15; i >= 3; i--)
             {
                 if (CodeNum[i + 1] < Codes.L5)
                 {
@@ -800,6 +806,9 @@ namespace CTCS_test
                     CodeNum[i] = Codes.L5;
                 }
             }
+            CodeNum[2] = Codes.UU;
+            CodeNum[1] = Codes.UU;
+            CodeNum[0] = Codes.UU;
         }
 
         private void button3_Click(object sender, EventArgs e)
