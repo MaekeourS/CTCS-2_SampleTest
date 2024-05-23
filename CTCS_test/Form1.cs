@@ -663,7 +663,7 @@ namespace CTCS_test
             if (timer2.Interval>1000)timer2.Interval = 1000;
             Xp++;
             if (Xp >= 250 && Xp <= 295 && side1) Yp += 2;
-            if (Xp >= 1540 && Xp <= 1580 && side2) Yp -= 2;
+            if (Xp >= 1540 && Xp <= 1585 && side2) Yp -= 2;
             if (Yp>343)Yp = 343;
             if (Yp<262) Yp = 262;
             Train1.Location = new Point(Xp, Yp);
