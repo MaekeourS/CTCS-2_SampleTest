@@ -90,8 +90,8 @@ namespace CTCS_test
             Light15Switch();
             Light16Switch();
             Light17Switch();
-            //Light18.Enabled = !Light18.Enabled;
-            //Light19.Enabled = !Light19.Enabled;
+            Light18Switch();
+            Light18Switch();
             label1.Text = "Speed:"+V.ToString()+"km/h";
         }
 
@@ -108,6 +108,7 @@ namespace CTCS_test
             if (CodeNum[0] == Codes.L4) Code1.BackgroundImage = CTCS_test.Properties.Resources.L4code;
             if (CodeNum[0] == Codes.L5) Code1.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
+
         private void Code2Switch()
         {
             if (CodeNum[1] == Codes.HU) Code2.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
@@ -585,6 +586,26 @@ namespace CTCS_test
             else if (CodeNum[18] == Codes.U2) Light17.BackgroundImage = CTCS_test.Properties.Resources.U;
             else if (CodeNum[18] == Codes.LU) Light17.BackgroundImage = CTCS_test.Properties.Resources.LU;
             else Light17.BackgroundImage = CTCS_test.Properties.Resources.L;
+        }
+
+        private void Light18Switch()
+        {
+            if (CodeNum[21] == Codes.HU) Light18.BackgroundImage = CTCS_test.Properties.Resources.H;
+            else if (CodeNum[21] == Codes.UU) Light18.BackgroundImage = CTCS_test.Properties.Resources.UU;
+            else if (CodeNum[21] == Codes.U) Light18.BackgroundImage = CTCS_test.Properties.Resources.U;
+            else if (CodeNum[21] == Codes.U2) Light18.BackgroundImage = CTCS_test.Properties.Resources.U;
+            else if (CodeNum[21] == Codes.LU) Light18.BackgroundImage = CTCS_test.Properties.Resources.LU;
+            else Light18.BackgroundImage = CTCS_test.Properties.Resources.L;
+        }
+
+        private void Light19Switch()
+        {
+            if (CodeNum[21] == Codes.HU) Light19.BackgroundImage = CTCS_test.Properties.Resources.H;
+            else if (CodeNum[21] == Codes.UU) Light19.BackgroundImage = CTCS_test.Properties.Resources.UU;
+            else if (CodeNum[21] == Codes.U) Light19.BackgroundImage = CTCS_test.Properties.Resources.U;
+            else if (CodeNum[21] == Codes.U2) Light19.BackgroundImage = CTCS_test.Properties.Resources.U;
+            else if (CodeNum[21] == Codes.LU) Light19.BackgroundImage = CTCS_test.Properties.Resources.LU;
+            else Light19.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
         private void Train1Moving()
