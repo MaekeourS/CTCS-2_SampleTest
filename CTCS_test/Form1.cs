@@ -616,26 +616,34 @@ namespace CTCS_test
             {
                 if (Occupy[i] == 1)
                 {
-                    if (CodeNum[i + 1] == Codes.LU) Brake = 1;
+                    if (CodeNum[i + 1] == Codes.LU)
+                    {
+                        Brake = 1;
+                        V -= Brake;
+                    }
                     if ((CodeNum[i + 1] == Codes.U )||( CodeNum[i + 1] == Codes.U2 )||( CodeNum[i + 1] == Codes.UU && Xp>299))
                     {
                         Brake = 1;
+                        V -= Brake;
                         if (V > 200) V = 200;
+                        if (V < 20) V = 20;
                     }
                     if (CodeNum[i + 1] == Codes.HU)
                     {
                         Brake = 1;
+                        V -= Brake;
                         if (V > 130) V = 130;
                         if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU) && Xp <= 1645 && V<=20)
                         {
                             Brake = 0;
                             V = 20;
                         }
+                        
                     }
                     break;
                 }
             }
-            V -= Brake;
+            
             if((CodeNum[i + 1] >= Codes.L || (Xp<299 && CodeNum[i + 1] == Codes.UU)) && V<250) V +=1;
             if (Type[i] == Types.ZXZX || Type[i] == Types.ZXCX) side1 = false; else side1 = true;
             if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) side2 = false; else side2 = true;
