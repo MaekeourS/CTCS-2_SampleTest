@@ -49,52 +49,53 @@ namespace CTCS_test
                 }
             }
 
-            Train1.Enabled = !Train1.Enabled;
-            Code1.Enabled = !Code1.Enabled;
-            Code2.Enabled = !Code2.Enabled;
-            Code3.Enabled = !Code3.Enabled;
-            Code4.Enabled = !Code4.Enabled;
-            Code5.Enabled = !Code5.Enabled;
-            Code6.Enabled = !Code6.Enabled;
-            Code7.Enabled = !Code7.Enabled;
-            Code8.Enabled = !Code8.Enabled;
-            Code9.Enabled = !Code9.Enabled;
-            Code10.Enabled = !Code10.Enabled;
-            Code11.Enabled = !Code11.Enabled;
-            Code12.Enabled = !Code12.Enabled;
-            Code13.Enabled = !Code13.Enabled;
-            Code14.Enabled = !Code14.Enabled;
-            Code15.Enabled = !Code15.Enabled;
-            Code16.Enabled = !Code16.Enabled;
-            Code17.Enabled = !Code17.Enabled;
-            Code18.Enabled = !Code18.Enabled;
-            Code19.Enabled = !Code19.Enabled;
-            Code20.Enabled = !Code20.Enabled;
-            Code21.Enabled = !Code21.Enabled;
-            Code22.Enabled = !Code22.Enabled;
-            Code23.Enabled = !Code23.Enabled;
-            Light1.Enabled = !Light1.Enabled;
-            Light2.Enabled = !Light2.Enabled;
-            Light3.Enabled = !Light3.Enabled;
-            Light4.Enabled = !Light4.Enabled;
-            Light5.Enabled = !Light5.Enabled;
-            Light6.Enabled = !Light6.Enabled;
-            Light7.Enabled = !Light7.Enabled;
-            Light8.Enabled = !Light8.Enabled;
-            Light9.Enabled = !Light9.Enabled;
-            Light10.Enabled = !Light10.Enabled;
-            Light11.Enabled = !Light11.Enabled;
-            Light12.Enabled = !Light12.Enabled;
-            Light13.Enabled = !Light13.Enabled;
-            Light14.Enabled = !Light14.Enabled;
-            Light15.Enabled = !Light15.Enabled;
-            Light16.Enabled = !Light16.Enabled;
-            Light17.Enabled = !Light17.Enabled;
-            Light18.Enabled = !Light18.Enabled;
-            Light19.Enabled = !Light19.Enabled;
+            Train1Moving();
+            Code1Switch();
+            Code2Switch();
+            Code3Switch();
+            Code4Switch();
+            Code5Switch();
+            Code6Switch();
+            Code7Switch();
+            Code8Switch();
+            Code9Switch();
+            Code10Switch();
+            Code11Switch();
+            Code12Switch();
+            Code13Switch();
+            Code14Switch();
+            Code15Switch();
+            Code16Switch();
+            Code17Switch();
+            Code18Switch();
+            Code19Switch();
+            Code20Switch();
+            Code21Switch();
+            Code22Switch();
+            Code23Switch();
+            Light1Switch();
+            Light2Switch();
+            Light3Switch();
+            Light4Switch();
+            Light5Switch();
+            Light6Switch();
+            Light7Switch();
+            Light8Switch();
+            Light9Switch();
+            Light10Switch();
+            Light11Switch();
+            Light12Switch();
+            Light13Switch();
+            Light14Switch();
+            Light15Switch();
+            Light16Switch();
+            Light17Switch();
+            //Light18.Enabled = !Light18.Enabled;
+            //Light19.Enabled = !Light19.Enabled;
             label1.Text = "Speed:"+V.ToString()+"km/h";
         }
-        private void Code1_EnabledChanged(object sender, EventArgs e)
+
+        private void Code1Switch()
         {
             if (CodeNum[0] == Codes.HU) Code1.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[0] == Codes.UU) Code1.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -107,8 +108,7 @@ namespace CTCS_test
             if (CodeNum[0] == Codes.L4) Code1.BackgroundImage = CTCS_test.Properties.Resources.L4code;
             if (CodeNum[0] == Codes.L5) Code1.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
-
-        private void Code2_EnabledChanged(object sender, EventArgs e)
+        private void Code2Switch()
         {
             if (CodeNum[1] == Codes.HU) Code2.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[1] == Codes.UU) Code2.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -122,7 +122,7 @@ namespace CTCS_test
             if (CodeNum[1] == Codes.L5) Code2.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code3_EnabledChanged(object sender, EventArgs e)
+        private void Code3Switch()
         {
             if (CodeNum[2] == Codes.HU) Code3.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[2] == Codes.UU) Code3.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -136,7 +136,7 @@ namespace CTCS_test
             if (CodeNum[2] == Codes.L5) Code3.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code4_EnabledChanged(object sender, EventArgs e)
+        private void Code4Switch()
         {
             if (CodeNum[3] == Codes.HU) Code4.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[3] == Codes.UU) Code4.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -150,7 +150,7 @@ namespace CTCS_test
             if (CodeNum[3] == Codes.L5) Code4.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code5_EnabledChanged(object sender, EventArgs e)
+        private void Code5Switch()
         {
             if (CodeNum[4] == Codes.HU) Code5.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[4] == Codes.UU) Code5.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -164,7 +164,7 @@ namespace CTCS_test
             if (CodeNum[4] == Codes.L5) Code5.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code6_EnabledChanged(object sender, EventArgs e)
+        private void Code6Switch()
         {
             if (CodeNum[5] == Codes.HU) Code6.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[5] == Codes.UU) Code6.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -178,7 +178,7 @@ namespace CTCS_test
             if (CodeNum[5] == Codes.L5) Code6.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code7_EnabledChanged(object sender, EventArgs e)
+        private void Code7Switch()
         {
             if (CodeNum[6] == Codes.HU) Code7.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[6] == Codes.UU) Code7.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -192,7 +192,7 @@ namespace CTCS_test
             if (CodeNum[6] == Codes.L5) Code7.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code8_EnabledChanged(object sender, EventArgs e)
+        private void Code8Switch()
         {
             if (CodeNum[7] == Codes.HU) Code8.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[7] == Codes.UU) Code8.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -206,7 +206,7 @@ namespace CTCS_test
             if (CodeNum[7] == Codes.L5) Code8.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code9_EnabledChanged(object sender, EventArgs e)
+        private void Code9Switch()
         {
             if (CodeNum[8] == Codes.HU) Code9.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[8] == Codes.UU) Code9.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -220,7 +220,7 @@ namespace CTCS_test
             if (CodeNum[8] == Codes.L5) Code9.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code10_EnabledChanged(object sender, EventArgs e)
+        private void Code10Switch()
         {
             if (CodeNum[9] == Codes.HU) Code10.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[9] == Codes.UU) Code10.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -234,7 +234,7 @@ namespace CTCS_test
             if (CodeNum[9] == Codes.L5) Code10.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code11_EnabledChanged(object sender, EventArgs e)
+        private void Code11Switch()
         {
             if (CodeNum[10] == Codes.HU) Code11.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[10] == Codes.UU) Code11.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -248,7 +248,7 @@ namespace CTCS_test
             if (CodeNum[10] == Codes.L5) Code11.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code12_EnabledChanged(object sender, EventArgs e)
+        private void Code12Switch()
         {
             if (CodeNum[11] == Codes.HU) Code12.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[11] == Codes.UU) Code12.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -262,7 +262,7 @@ namespace CTCS_test
             if (CodeNum[11] == Codes.L5) Code12.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code13_EnabledChanged(object sender, EventArgs e)
+        private void Code13Switch()
         {
             if (CodeNum[12] == Codes.HU) Code13.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[12] == Codes.UU) Code13.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -276,7 +276,7 @@ namespace CTCS_test
             if (CodeNum[12] == Codes.L5) Code13.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code14_EnabledChanged(object sender, EventArgs e)
+        private void Code14Switch()
         {
             if (CodeNum[13] == Codes.HU) Code14.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[13] == Codes.UU) Code14.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -290,7 +290,7 @@ namespace CTCS_test
             if (CodeNum[13] == Codes.L5) Code14.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code15_EnabledChanged(object sender, EventArgs e)
+        private void Code15Switch()
         {
             if (CodeNum[14] == Codes.HU) Code15.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[14] == Codes.UU) Code15.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -304,7 +304,7 @@ namespace CTCS_test
             if (CodeNum[14] == Codes.L5) Code15.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code16_EnabledChanged(object sender, EventArgs e)
+        private void Code16Switch()
         {
             if (CodeNum[15] == Codes.HU) Code16.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[15] == Codes.UU) Code16.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -318,7 +318,7 @@ namespace CTCS_test
             if (CodeNum[15] == Codes.L5) Code16.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code17_EnabledChanged(object sender, EventArgs e)
+        private void Code17Switch()
         {
             if (CodeNum[16] == Codes.HU) Code17.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[16] == Codes.UU) Code17.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -332,7 +332,7 @@ namespace CTCS_test
             if (CodeNum[16] == Codes.L5) Code17.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code18_EnabledChanged(object sender, EventArgs e)
+        private void Code18Switch()
         {
             if (CodeNum[17] == Codes.HU) Code18.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[17] == Codes.UU) Code18.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -346,7 +346,7 @@ namespace CTCS_test
             if (CodeNum[17] == Codes.L5) Code18.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code19_EnabledChanged(object sender, EventArgs e)
+        private void Code19Switch()
         {
             if (CodeNum[18] == Codes.HU) Code19.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[18] == Codes.UU) Code19.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -360,7 +360,7 @@ namespace CTCS_test
             if (CodeNum[18] == Codes.L5) Code19.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code20_EnabledChanged(object sender, EventArgs e)
+        private void Code20Switch()
         {
             if (CodeNum[19] == Codes.HU) Code20.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[19] == Codes.UU) Code20.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -374,7 +374,7 @@ namespace CTCS_test
             if (CodeNum[19] == Codes.L5) Code20.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code21_EnabledChanged(object sender, EventArgs e)
+        private void Code21Switch()
         {
             if (CodeNum[20] == Codes.HU) Code21.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[20] == Codes.UU) Code21.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -388,7 +388,7 @@ namespace CTCS_test
             if (CodeNum[20] == Codes.L5) Code21.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code22_EnabledChanged(object sender, EventArgs e)
+        private void Code22Switch()
         {
             if (CodeNum[21] == Codes.HU) Code22.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[21] == Codes.UU) Code22.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -402,7 +402,7 @@ namespace CTCS_test
             if (CodeNum[21] == Codes.L5) Code22.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Code23_EnabledChanged(object sender, EventArgs e)
+        private void Code23Switch()
         {
             if (CodeNum[22] == Codes.HU) Code23.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
             if (CodeNum[22] == Codes.UU) Code23.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
@@ -416,7 +416,7 @@ namespace CTCS_test
             if (CodeNum[22] == Codes.L5) Code23.BackgroundImage = CTCS_test.Properties.Resources.L5code;
         }
 
-        private void Light1_EnabledChanged(object sender, EventArgs e)
+        private void Light1Switch()
         {
             if (CodeNum[2] == Codes.HU) Light1.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[2] == Codes.UU) Light1.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -426,7 +426,7 @@ namespace CTCS_test
             else Light1.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light2_EnabledChanged(object sender, EventArgs e)
+        private void Light2Switch()
         {
             if (CodeNum[2] == Codes.HU) Light2.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[2] == Codes.UU) Light2.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -436,7 +436,7 @@ namespace CTCS_test
             else Light2.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light3_EnabledChanged(object sender, EventArgs e)
+        private void Light3Switch()
         {
             if (CodeNum[4] == Codes.HU) Light3.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[4] == Codes.UU) Light3.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -447,7 +447,7 @@ namespace CTCS_test
 
         }
 
-        private void Light4_EnabledChanged(object sender, EventArgs e)
+        private void Light4Switch()
         {
             if (CodeNum[5] == Codes.HU) Light4.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[5] == Codes.UU) Light4.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -457,7 +457,7 @@ namespace CTCS_test
             else Light4.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light5_EnabledChanged(object sender, EventArgs e)
+        private void Light5Switch()
         {
             if (CodeNum[6] == Codes.HU) Light5.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[6] == Codes.UU) Light5.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -467,7 +467,7 @@ namespace CTCS_test
             else Light5.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light6_EnabledChanged(object sender, EventArgs e)
+        private void Light6Switch()
         {
             if (CodeNum[7] == Codes.HU) Light6.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[7] == Codes.UU) Light6.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -477,7 +477,7 @@ namespace CTCS_test
             else Light6.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light7_EnabledChanged(object sender, EventArgs e)
+        private void Light7Switch()
         {
             if (CodeNum[8] == Codes.HU) Light7.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[8] == Codes.UU) Light7.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -487,7 +487,7 @@ namespace CTCS_test
             else Light7.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light8_EnabledChanged(object sender, EventArgs e)
+        private void Light8Switch()
         {
             if (CodeNum[9] == Codes.HU) Light8.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[9] == Codes.UU) Light8.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -497,7 +497,7 @@ namespace CTCS_test
             else Light8.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light9_EnabledChanged(object sender, EventArgs e)
+        private void Light9Switch()
         {
             if (CodeNum[10] == Codes.HU) Light9.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[10] == Codes.UU) Light9.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -507,7 +507,7 @@ namespace CTCS_test
             else Light9.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light10_EnabledChanged(object sender, EventArgs e)
+        private void Light10Switch()
         {
             if (CodeNum[11] == Codes.HU) Light10.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[11] == Codes.UU) Light10.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -517,7 +517,7 @@ namespace CTCS_test
             else Light10.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light11_EnabledChanged(object sender, EventArgs e)
+        private void Light11Switch()
         {
             if (CodeNum[12] == Codes.HU) Light11.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[12] == Codes.UU) Light11.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -527,7 +527,7 @@ namespace CTCS_test
             else Light11.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light12_EnabledChanged(object sender, EventArgs e)
+        private void Light12Switch()
         {
             if (CodeNum[13] == Codes.HU) Light12.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[13] == Codes.UU) Light12.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -537,7 +537,7 @@ namespace CTCS_test
             else Light12.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light13_EnabledChanged(object sender, EventArgs e)
+        private void Light13Switch()
         {
             if (CodeNum[14] == Codes.HU) Light13.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[14] == Codes.UU) Light13.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -547,7 +547,7 @@ namespace CTCS_test
             else Light13.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light14_EnabledChanged(object sender, EventArgs e)
+        private void Light14Switch()
         {
             if (CodeNum[15] == Codes.HU) Light14.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[15] == Codes.UU) Light14.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -557,7 +557,7 @@ namespace CTCS_test
             else Light14.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light15_EnabledChanged(object sender, EventArgs e)
+        private void Light15Switch()
         {
             if (CodeNum[16] == Codes.HU) Light15.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[16] == Codes.UU) Light15.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -567,7 +567,7 @@ namespace CTCS_test
             else Light15.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light16_EnabledChanged(object sender, EventArgs e)
+        private void Light16Switch()
         {
             if (CodeNum[17] == Codes.HU) Light16.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[17] == Codes.UU) Light16.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -577,7 +577,7 @@ namespace CTCS_test
             else Light16.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Light17_EnabledChanged(object sender, EventArgs e)
+        private void Light17Switch()
         {
             if (CodeNum[18] == Codes.HU) Light17.BackgroundImage = CTCS_test.Properties.Resources.H;
             else if (CodeNum[18] == Codes.UU) Light17.BackgroundImage = CTCS_test.Properties.Resources.UU;
@@ -587,7 +587,7 @@ namespace CTCS_test
             else Light17.BackgroundImage = CTCS_test.Properties.Resources.L;
         }
 
-        private void Train1_EnabledChanged(object sender, EventArgs e)
+        private void Train1Moving()
         {
             double Brake = 0;
             int i;

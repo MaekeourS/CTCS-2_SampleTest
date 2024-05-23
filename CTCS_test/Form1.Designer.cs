@@ -137,7 +137,6 @@
             this.Light1.Size = new System.Drawing.Size(51, 32);
             this.Light1.TabIndex = 0;
             this.Light1.TabStop = false;
-            this.Light1.EnabledChanged += new System.EventHandler(this.Light1_EnabledChanged);
             // 
             // Light2
             // 
@@ -148,7 +147,6 @@
             this.Light2.Size = new System.Drawing.Size(51, 32);
             this.Light2.TabIndex = 1;
             this.Light2.TabStop = false;
-            this.Light2.EnabledChanged += new System.EventHandler(this.Light2_EnabledChanged);
             // 
             // Light3
             // 
@@ -159,7 +157,6 @@
             this.Light3.Size = new System.Drawing.Size(51, 32);
             this.Light3.TabIndex = 2;
             this.Light3.TabStop = false;
-            this.Light3.EnabledChanged += new System.EventHandler(this.Light3_EnabledChanged);
             // 
             // Light4
             // 
@@ -170,7 +167,6 @@
             this.Light4.Size = new System.Drawing.Size(51, 32);
             this.Light4.TabIndex = 3;
             this.Light4.TabStop = false;
-            this.Light4.EnabledChanged += new System.EventHandler(this.Light4_EnabledChanged);
             // 
             // Light5
             // 
@@ -181,7 +177,6 @@
             this.Light5.Size = new System.Drawing.Size(51, 32);
             this.Light5.TabIndex = 4;
             this.Light5.TabStop = false;
-            this.Light5.EnabledChanged += new System.EventHandler(this.Light5_EnabledChanged);
             // 
             // timer1
             // 
@@ -197,7 +192,6 @@
             this.Light6.Size = new System.Drawing.Size(51, 32);
             this.Light6.TabIndex = 5;
             this.Light6.TabStop = false;
-            this.Light6.EnabledChanged += new System.EventHandler(this.Light6_EnabledChanged);
             // 
             // Light7
             // 
@@ -208,7 +202,6 @@
             this.Light7.Size = new System.Drawing.Size(51, 32);
             this.Light7.TabIndex = 6;
             this.Light7.TabStop = false;
-            this.Light7.EnabledChanged += new System.EventHandler(this.Light7_EnabledChanged);
             // 
             // Light8
             // 
@@ -219,7 +212,6 @@
             this.Light8.Size = new System.Drawing.Size(51, 32);
             this.Light8.TabIndex = 7;
             this.Light8.TabStop = false;
-            this.Light8.EnabledChanged += new System.EventHandler(this.Light8_EnabledChanged);
             // 
             // Light9
             // 
@@ -230,7 +222,6 @@
             this.Light9.Size = new System.Drawing.Size(51, 32);
             this.Light9.TabIndex = 8;
             this.Light9.TabStop = false;
-            this.Light9.EnabledChanged += new System.EventHandler(this.Light9_EnabledChanged);
             // 
             // Light10
             // 
@@ -241,7 +232,6 @@
             this.Light10.Size = new System.Drawing.Size(51, 32);
             this.Light10.TabIndex = 9;
             this.Light10.TabStop = false;
-            this.Light10.EnabledChanged += new System.EventHandler(this.Light10_EnabledChanged);
             // 
             // Light12
             // 
@@ -252,7 +242,6 @@
             this.Light12.Size = new System.Drawing.Size(51, 32);
             this.Light12.TabIndex = 10;
             this.Light12.TabStop = false;
-            this.Light12.EnabledChanged += new System.EventHandler(this.Light12_EnabledChanged);
             // 
             // Light11
             // 
@@ -263,7 +252,6 @@
             this.Light11.Size = new System.Drawing.Size(51, 32);
             this.Light11.TabIndex = 11;
             this.Light11.TabStop = false;
-            this.Light11.EnabledChanged += new System.EventHandler(this.Light11_EnabledChanged);
             // 
             // Code1
             // 
@@ -274,7 +262,6 @@
             this.Code1.Size = new System.Drawing.Size(44, 28);
             this.Code1.TabIndex = 12;
             this.Code1.TabStop = false;
-            this.Code1.EnabledChanged += new System.EventHandler(this.Code1_EnabledChanged);
             // 
             // Code2
             // 
@@ -285,7 +272,6 @@
             this.Code2.Size = new System.Drawing.Size(86, 28);
             this.Code2.TabIndex = 13;
             this.Code2.TabStop = false;
-            this.Code2.EnabledChanged += new System.EventHandler(this.Code2_EnabledChanged);
             // 
             // Code3
             // 
@@ -296,7 +282,6 @@
             this.Code3.Size = new System.Drawing.Size(86, 28);
             this.Code3.TabIndex = 14;
             this.Code3.TabStop = false;
-            this.Code3.EnabledChanged += new System.EventHandler(this.Code3_EnabledChanged);
             // 
             // Code4
             // 
@@ -307,7 +292,6 @@
             this.Code4.Size = new System.Drawing.Size(83, 28);
             this.Code4.TabIndex = 15;
             this.Code4.TabStop = false;
-            this.Code4.EnabledChanged += new System.EventHandler(this.Code4_EnabledChanged);
             // 
             // Code5
             // 
@@ -318,7 +302,6 @@
             this.Code5.Size = new System.Drawing.Size(83, 28);
             this.Code5.TabIndex = 16;
             this.Code5.TabStop = false;
-            this.Code5.EnabledChanged += new System.EventHandler(this.Code5_EnabledChanged);
             // 
             // Code6
             // 
@@ -329,7 +312,6 @@
             this.Code6.Size = new System.Drawing.Size(82, 28);
             this.Code6.TabIndex = 17;
             this.Code6.TabStop = false;
-            this.Code6.EnabledChanged += new System.EventHandler(this.Code6_EnabledChanged);
             // 
             // Code7
             // 
@@ -340,7 +322,6 @@
             this.Code7.Size = new System.Drawing.Size(84, 28);
             this.Code7.TabIndex = 18;
             this.Code7.TabStop = false;
-            this.Code7.EnabledChanged += new System.EventHandler(this.Code7_EnabledChanged);
             // 
             // Code8
             // 
@@ -351,7 +332,6 @@
             this.Code8.Size = new System.Drawing.Size(80, 28);
             this.Code8.TabIndex = 19;
             this.Code8.TabStop = false;
-            this.Code8.EnabledChanged += new System.EventHandler(this.Code8_EnabledChanged);
             // 
             // Code9
             // 
@@ -362,7 +342,6 @@
             this.Code9.Size = new System.Drawing.Size(84, 28);
             this.Code9.TabIndex = 20;
             this.Code9.TabStop = false;
-            this.Code9.EnabledChanged += new System.EventHandler(this.Code9_EnabledChanged);
             // 
             // Code10
             // 
@@ -373,7 +352,6 @@
             this.Code10.Size = new System.Drawing.Size(84, 28);
             this.Code10.TabIndex = 21;
             this.Code10.TabStop = false;
-            this.Code10.EnabledChanged += new System.EventHandler(this.Code10_EnabledChanged);
             // 
             // Code11
             // 
@@ -384,7 +362,6 @@
             this.Code11.Size = new System.Drawing.Size(84, 28);
             this.Code11.TabIndex = 22;
             this.Code11.TabStop = false;
-            this.Code11.EnabledChanged += new System.EventHandler(this.Code11_EnabledChanged);
             // 
             // Code12
             // 
@@ -395,7 +372,6 @@
             this.Code12.Size = new System.Drawing.Size(83, 28);
             this.Code12.TabIndex = 23;
             this.Code12.TabStop = false;
-            this.Code12.EnabledChanged += new System.EventHandler(this.Code12_EnabledChanged);
             // 
             // Code13
             // 
@@ -406,7 +382,6 @@
             this.Code13.Size = new System.Drawing.Size(83, 28);
             this.Code13.TabIndex = 24;
             this.Code13.TabStop = false;
-            this.Code13.EnabledChanged += new System.EventHandler(this.Code13_EnabledChanged);
             // 
             // Code14
             // 
@@ -417,7 +392,6 @@
             this.Code14.Size = new System.Drawing.Size(83, 28);
             this.Code14.TabIndex = 25;
             this.Code14.TabStop = false;
-            this.Code14.EnabledChanged += new System.EventHandler(this.Code14_EnabledChanged);
             // 
             // Code15
             // 
@@ -428,7 +402,6 @@
             this.Code15.Size = new System.Drawing.Size(83, 28);
             this.Code15.TabIndex = 26;
             this.Code15.TabStop = false;
-            this.Code15.EnabledChanged += new System.EventHandler(this.Code15_EnabledChanged);
             // 
             // Code16
             // 
@@ -439,7 +412,6 @@
             this.Code16.Size = new System.Drawing.Size(88, 28);
             this.Code16.TabIndex = 27;
             this.Code16.TabStop = false;
-            this.Code16.EnabledChanged += new System.EventHandler(this.Code16_EnabledChanged);
             // 
             // Code17
             // 
@@ -450,7 +422,6 @@
             this.Code17.Size = new System.Drawing.Size(80, 28);
             this.Code17.TabIndex = 28;
             this.Code17.TabStop = false;
-            this.Code17.EnabledChanged += new System.EventHandler(this.Code17_EnabledChanged);
             // 
             // Code18
             // 
@@ -461,7 +432,6 @@
             this.Code18.Size = new System.Drawing.Size(83, 28);
             this.Code18.TabIndex = 29;
             this.Code18.TabStop = false;
-            this.Code18.EnabledChanged += new System.EventHandler(this.Code18_EnabledChanged);
             // 
             // Code19
             // 
@@ -472,7 +442,6 @@
             this.Code19.Size = new System.Drawing.Size(84, 28);
             this.Code19.TabIndex = 30;
             this.Code19.TabStop = false;
-            this.Code19.EnabledChanged += new System.EventHandler(this.Code19_EnabledChanged);
             // 
             // Code20
             // 
@@ -483,7 +452,6 @@
             this.Code20.Size = new System.Drawing.Size(84, 28);
             this.Code20.TabIndex = 31;
             this.Code20.TabStop = false;
-            this.Code20.EnabledChanged += new System.EventHandler(this.Code20_EnabledChanged);
             // 
             // Code21
             // 
@@ -494,7 +462,6 @@
             this.Code21.Size = new System.Drawing.Size(84, 28);
             this.Code21.TabIndex = 32;
             this.Code21.TabStop = false;
-            this.Code21.EnabledChanged += new System.EventHandler(this.Code21_EnabledChanged);
             // 
             // Code22
             // 
@@ -505,7 +472,6 @@
             this.Code22.Size = new System.Drawing.Size(84, 28);
             this.Code22.TabIndex = 33;
             this.Code22.TabStop = false;
-            this.Code22.EnabledChanged += new System.EventHandler(this.Code22_EnabledChanged);
             // 
             // Code23
             // 
@@ -516,7 +482,6 @@
             this.Code23.Size = new System.Drawing.Size(41, 28);
             this.Code23.TabIndex = 34;
             this.Code23.TabStop = false;
-            this.Code23.EnabledChanged += new System.EventHandler(this.Code23_EnabledChanged);
             // 
             // Light13
             // 
@@ -527,7 +492,6 @@
             this.Light13.Size = new System.Drawing.Size(51, 32);
             this.Light13.TabIndex = 35;
             this.Light13.TabStop = false;
-            this.Light13.EnabledChanged += new System.EventHandler(this.Light13_EnabledChanged);
             // 
             // Light14
             // 
@@ -538,7 +502,6 @@
             this.Light14.Size = new System.Drawing.Size(51, 32);
             this.Light14.TabIndex = 36;
             this.Light14.TabStop = false;
-            this.Light14.EnabledChanged += new System.EventHandler(this.Light14_EnabledChanged);
             // 
             // Light15
             // 
@@ -549,7 +512,6 @@
             this.Light15.Size = new System.Drawing.Size(51, 32);
             this.Light15.TabIndex = 37;
             this.Light15.TabStop = false;
-            this.Light15.EnabledChanged += new System.EventHandler(this.Light15_EnabledChanged);
             // 
             // Light16
             // 
@@ -560,7 +522,6 @@
             this.Light16.Size = new System.Drawing.Size(51, 32);
             this.Light16.TabIndex = 38;
             this.Light16.TabStop = false;
-            this.Light16.EnabledChanged += new System.EventHandler(this.Light16_EnabledChanged);
             // 
             // Light17
             // 
@@ -571,7 +532,6 @@
             this.Light17.Size = new System.Drawing.Size(51, 32);
             this.Light17.TabIndex = 39;
             this.Light17.TabStop = false;
-            this.Light17.EnabledChanged += new System.EventHandler(this.Light17_EnabledChanged);
             // 
             // Light18
             // 
@@ -602,7 +562,6 @@
             this.Train1.Size = new System.Drawing.Size(51, 10);
             this.Train1.TabIndex = 42;
             this.Train1.TabStop = false;
-            this.Train1.EnabledChanged += new System.EventHandler(this.Train1_EnabledChanged);
             // 
             // label1
             // 
