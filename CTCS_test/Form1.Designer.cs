@@ -597,7 +597,7 @@
             // 
             this.Train1.BackgroundImage = global::CTCS_test.Properties.Resources.train;
             this.Train1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Train1.Location = new System.Drawing.Point(1477, 342);
+            this.Train1.Location = new System.Drawing.Point(295, 343);
             this.Train1.Name = "Train1";
             this.Train1.Size = new System.Drawing.Size(51, 10);
             this.Train1.TabIndex = 42;
@@ -621,29 +621,29 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(398, 605);
+            this.button1.Location = new System.Drawing.Point(209, 605);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 76);
             this.button1.TabIndex = 44;
-            this.button1.Text = "重新发车";
+            this.button1.Text = "发车";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(208, 605);
+            this.button2.Location = new System.Drawing.Point(399, 605);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(162, 76);
             this.button2.TabIndex = 45;
-            this.button2.Text = "开始";
+            this.button2.Text = "暂停";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(588, 605);
+            this.button3.Location = new System.Drawing.Point(589, 605);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(162, 76);
             this.button3.TabIndex = 46;
@@ -666,7 +666,6 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(819, 616);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(186, 22);
@@ -691,7 +690,6 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Enabled = false;
             this.radioButton4.Location = new System.Drawing.Point(819, 672);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(186, 22);
