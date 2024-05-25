@@ -30,15 +30,21 @@ namespace CTCS_test
         Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int j = 0;
+            int j = 0, Temp = 19;
             for (int i = 18; i >= 0; i--)
             {
                 if (Occupy[i] == 0)
                 {
                     if (j < 8) j++;
                 }
-                else j = 0;
-                if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) CodeNum[i] = ZXFM[j];
+                else
+                {
+                    j = 0;
+                    Temp = i;
+                }
+           
+                if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX || Occupy[Temp] == -1) 
+                    CodeNum[i] = ZXFM[j];
                 else CodeNum[i] = CXFM[j]; 
             }
             if (Type[2] == Types.CXZX || Type[2] == Types.CXCX)
