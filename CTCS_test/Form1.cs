@@ -646,6 +646,7 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         V -= Brake;
+                        if (V < 20) V = 20;
                     }
                     if ((CodeNum[i + 1] == Codes.U )||( CodeNum[i + 1] == Codes.U2 )||( CodeNum[i + 1] == Codes.UU && Xp>299))
                     {
@@ -658,7 +659,7 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         V -= Brake;
-                        if (V > 130) V = 130;
+                        if (V > 140) V = 140;
                         if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU) && Xp <= 1645 && V<=20)
                         {
                             Brake = 0;
@@ -693,7 +694,7 @@ namespace CTCS_test
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Interval = (int)(20000/(V+1));
+            timer2.Interval = (int)(24500/(V+1));
             if (timer2.Interval>1000)timer2.Interval = 1000;
             Xp++;
             if (Xp >= 250 && Xp <= 295 && side1) Yp += 2;
