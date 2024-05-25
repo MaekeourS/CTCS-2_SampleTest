@@ -26,29 +26,28 @@ namespace CTCS_test
         int Xp = 200;
         int Yp = 343;
         bool side1 = false, side2 = false;
+        Codes[] ZXFM = { Codes.HU, Codes.U, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5, Codes.L5 };
+        Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
         private void timer1_Tick(object sender, EventArgs e)
         {
-            for (int i = 21; i >= 0; i--)
+            int j = 0;
+            for (int i = 18; i >= 0; i--)
             {
-                if (CodeNum[i + 1] == Codes.HU && Occupy[i + 1] != 0 && Occupy[i] == 0)
+                if (Occupy[i] == 0)
                 {
-                    CodeNum[i] = Codes.U;
-                    if(i>=1)CodeNum[i - 1] = Codes.LU;
-                    for (int j = i - 2; j >= 0; j--)
-                    {
-                        if (CodeNum[j + 1] < Codes.L5)
-                        {
-                            CodeNum[j] = CodeNum[j + 1] + 1;
-                        }
-                        else
-                        {
-                            CodeNum[j] = Codes.L5;
-                        }
-                    }
-
+                    if (j < 8) j++;
+                }
+                else j = 0;
+                if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) CodeNum[i] = ZXFM[j];
+                else CodeNum[i] = CXFM[j]; 
+            }
+            if (Type[2] == Types.CXZX || Type[2] == Types.CXCX)
+            {
+                for (int i = 2;i>= 0; i--)
+                {
+                    CodeNum[i] = Codes.UU;
                 }
             }
-
             Train1Moving();
             Code1Switch();
             Code2Switch();
@@ -612,26 +611,26 @@ namespace CTCS_test
         {
             double Brake = 0;
             int i;
-            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else Occupy[0] = 0;
-            if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else Occupy[1] = 0;
-            if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else Occupy[2] = 0;
-            if (Xp > 287 && Xp < 417) { CodeNum[3] = Codes.HU; Occupy[3] = 1; } else Occupy[3] = 0;
-            if (Xp > 367 && Xp < 497) { CodeNum[4] = Codes.HU; Occupy[4] = 1; } else Occupy[4] = 0;
-            if (Xp > 447 && Xp < 577) { CodeNum[5] = Codes.HU; Occupy[5] = 1; } else Occupy[5] = 0;
-            if (Xp > 527 && Xp < 657) { CodeNum[6] = Codes.HU; Occupy[6] = 1; } else Occupy[6] = 0;
-            if (Xp > 607 && Xp < 737) { CodeNum[7] = Codes.HU; Occupy[7] = 1; } else Occupy[7] = 0;
-            if (Xp > 687 && Xp < 817) { CodeNum[8] = Codes.HU; Occupy[8] = 1; } else Occupy[8] = 0;
-            if (Xp > 767 && Xp < 897) { CodeNum[9] = Codes.HU; Occupy[9] = 1; } else Occupy[9] = 0;
-            if (Xp > 847 && Xp < 977) { CodeNum[10] = Codes.HU; Occupy[10] = 1; } else Occupy[10] = 0;
-            if (Xp > 927 && Xp < 1057) { CodeNum[11] = Codes.HU; Occupy[11] = 1; } else Occupy[11] = 0;
-            if (Xp > 1007 && Xp < 1137) { CodeNum[12] = Codes.HU; Occupy[12] = 1; } else Occupy[12] = 0;
-            if (Xp > 1087 && Xp < 1217) { CodeNum[13] = Codes.HU; Occupy[13] = 1; } else Occupy[13] = 0;
-            if (Xp > 1167 && Xp < 1297) { CodeNum[14] = Codes.HU; Occupy[14] = 1; } else Occupy[14] = 0;
-            if (Xp > 1247 && Xp < 1377) { CodeNum[15] = Codes.HU; Occupy[15] = 1; } else Occupy[15] = 0;
-            if (Xp > 1327 && Xp < 1457) { CodeNum[16] = Codes.HU; Occupy[16] = 1; } else Occupy[16] = 0;
-            if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else Occupy[17] = 0;
-            if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else Occupy[18] = 0;
-            if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else Occupy[19] = 0;
+            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else if(Occupy[0] != -1) Occupy[0] = 0;
+            if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else if (Occupy[1] != -1) Occupy[1] = 0;
+            if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else if (Occupy[2] != -1) Occupy[2] = 0;
+            if (Xp > 287 && Xp < 417) { CodeNum[3] = Codes.HU; Occupy[3] = 1; } else if (Occupy[3] != -1) Occupy[3] = 0;
+            if (Xp > 367 && Xp < 497) { CodeNum[4] = Codes.HU; Occupy[4] = 1; } else if (Occupy[4] != -1) Occupy[4] = 0;
+            if (Xp > 447 && Xp < 577) { CodeNum[5] = Codes.HU; Occupy[5] = 1; } else if (Occupy[5] != -1) Occupy[5] = 0;
+            if (Xp > 527 && Xp < 657) { CodeNum[6] = Codes.HU; Occupy[6] = 1; } else if (Occupy[6] != -1) Occupy[6] = 0;
+            if (Xp > 607 && Xp < 737) { CodeNum[7] = Codes.HU; Occupy[7] = 1; } else if (Occupy[7] != -1) Occupy[7] = 0;
+            if (Xp > 687 && Xp < 817) { CodeNum[8] = Codes.HU; Occupy[8] = 1; } else if (Occupy[8] != -1) Occupy[8] = 0;
+            if (Xp > 767 && Xp < 897) { CodeNum[9] = Codes.HU; Occupy[9] = 1; } else if (Occupy[9] != -1) Occupy[9] = 0;
+            if (Xp > 847 && Xp < 977) { CodeNum[10] = Codes.HU; Occupy[10] = 1; } else if (Occupy[10] != -1) Occupy[10] = 0;
+            if (Xp > 927 && Xp < 1057) { CodeNum[11] = Codes.HU; Occupy[11] = 1; } else if (Occupy[11] != -1) Occupy[11] = 0;
+            if (Xp > 1007 && Xp < 1137) { CodeNum[12] = Codes.HU; Occupy[12] = 1; } else if (Occupy[12] != -1) Occupy[12] = 0;
+            if (Xp > 1087 && Xp < 1217) { CodeNum[13] = Codes.HU; Occupy[13] = 1; } else if (Occupy[13] != -1) Occupy[13] = 0;
+            if (Xp > 1167 && Xp < 1297) { CodeNum[14] = Codes.HU; Occupy[14] = 1; } else if (Occupy[14] != -1) Occupy[14] = 0;
+            if (Xp > 1247 && Xp < 1377) { CodeNum[15] = Codes.HU; Occupy[15] = 1; } else if (Occupy[15] != -1) Occupy[15] = 0;
+            if (Xp > 1327 && Xp < 1457) { CodeNum[16] = Codes.HU; Occupy[16] = 1; } else if (Occupy[16] != -1) Occupy[16] = 0;
+            if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else if (Occupy[17] != -1) Occupy[17] = 0;
+            if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else if (Occupy[18] != -1) Occupy[18] = 0;
+            if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else if (Occupy[19] != -1) Occupy[19] = 0;
 
             for (i = 22; i > 0; i--)
             {
@@ -838,6 +837,217 @@ namespace CTCS_test
             CodeNum[2] = Codes.UU;
             CodeNum[1] = Codes.UU;
             CodeNum[0] = Codes.UU;
+        }
+
+
+
+        private void Code5_Click(object sender, EventArgs e)
+        {
+            if (Occupy[4] == -1)
+            {
+                CodeNum[4] = Codes.L;
+                Occupy[4] = 0;
+            }
+            else
+            {
+                CodeNum[4] = Codes.HU;
+                Occupy[4] = -1;
+            }
+        }
+
+        private void Code6_Click(object sender, EventArgs e)
+        {
+            if (Occupy[5] == -1)
+            {
+                CodeNum[5] = Codes.L;
+                Occupy[5] = 0;
+            }
+            else
+            {
+                CodeNum[5] = Codes.HU;
+                Occupy[5] = -1;
+            }
+        }
+
+        private void Code7_Click(object sender, EventArgs e)
+        {
+            if (Occupy[6] == -1)
+            {
+                CodeNum[6] = Codes.L;
+                Occupy[6] = 0;
+            }
+            else
+            {
+                CodeNum[6] = Codes.HU;
+                Occupy[6] = -1;
+            }
+        }
+        private void Code8_Click(object sender, EventArgs e)
+        {
+            if (Occupy[7] == -1)
+            {
+                CodeNum[7] = Codes.L;
+                Occupy[7] = 0;
+            }
+            else
+            {
+                CodeNum[7] = Codes.HU;
+                Occupy[7] = -1;
+            }
+        }
+
+        private void Code9_Click(object sender, EventArgs e)
+        {
+            if (Occupy[8] == -1)
+            {
+                CodeNum[8] = Codes.L;
+                Occupy[8] = 0;
+            }
+            else
+            {
+                CodeNum[8] = Codes.HU;
+                Occupy[8] = -1;
+            }
+        }
+
+        private void Code10_Click(object sender, EventArgs e)
+        {
+            if (Occupy[9] == -1)
+            {
+                CodeNum[9] = Codes.L;
+                Occupy[9] = 0;
+            }
+            else
+            {
+                CodeNum[9] = Codes.HU;
+                Occupy[9] = -1;
+            }
+        }
+
+        private void Code11_Click(object sender, EventArgs e)
+        {
+            if (Occupy[10] == -1)
+            {
+                CodeNum[10] = Codes.L;
+                Occupy[10] = 0;
+            }
+            else
+            {
+                CodeNum[10] = Codes.HU;
+                Occupy[10] = -1;
+            }
+        }
+
+        private void Code12_Click(object sender, EventArgs e)
+        {
+            if (Occupy[11] == -1)
+            {
+                CodeNum[11] = Codes.L;
+                Occupy[11] = 0;
+            }
+            else
+            {
+                CodeNum[11] = Codes.HU;
+                Occupy[11] = -1;
+            }
+        }
+
+        private void Code13_Click(object sender, EventArgs e)
+        {
+            if (Occupy[12] == -1)
+            {
+                CodeNum[12] = Codes.L;
+                Occupy[12] = 0;
+            }
+            else
+            {
+                CodeNum[12] = Codes.HU;
+                Occupy[12] = -1;
+            }
+        }
+
+        private void Code14_Click(object sender, EventArgs e)
+        {
+            if (Occupy[13] == -1)
+            {
+                CodeNum[13] = Codes.L;
+                Occupy[13] = 0;
+            }
+            else
+            {
+                CodeNum[13] = Codes.HU;
+                Occupy[13] = -1;
+            }
+        }
+
+        private void Code15_Click(object sender, EventArgs e)
+        {
+            if (Occupy[14] == -1)
+            {
+                CodeNum[14] = Codes.L;
+                Occupy[14] = 0;
+            }
+            else
+            {
+                CodeNum[14] = Codes.HU;
+                Occupy[14] = -1;
+            }
+        }
+
+        private void Code16_Click(object sender, EventArgs e)
+        {
+            if (Occupy[15] == -1)
+            {
+                CodeNum[15] = Codes.L;
+                Occupy[15] = 0;
+            }
+            else
+            {
+                CodeNum[15] = Codes.HU;
+                Occupy[15] = -1;
+            }
+        }
+
+        private void Code17_Click(object sender, EventArgs e)
+        {
+            if (Occupy[16] == -1)
+            {
+                CodeNum[16] = Codes.L;
+                Occupy[16] = 0;
+            }
+            else
+            {
+                CodeNum[16] = Codes.HU;
+                Occupy[16] = -1;
+            }
+        }
+
+        private void Code18_Click(object sender, EventArgs e)
+        {
+            if (Occupy[17] == -1)
+            {
+                CodeNum[17] = Codes.L;
+                Occupy[17] = 0;
+            }
+            else
+            {
+                CodeNum[17] = Codes.HU;
+                Occupy[17] = -1;
+            }
+        }
+
+        private void Code19_Click(object sender, EventArgs e)
+        {
+            if (Occupy[18] == -1)
+            {
+                CodeNum[18] = Codes.L;
+                Occupy[18] = 0;
+            }
+            else
+            {
+                CodeNum[18] = Codes.HU;
+                Occupy[18] = -1;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
