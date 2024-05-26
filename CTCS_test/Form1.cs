@@ -54,6 +54,7 @@ namespace CTCS_test
                     CodeNum[i] = Codes.UU;
                 }
             }
+            listBox1.TopIndex = listBox1.Items.Count - 1;
             Train1Moving();
             Code1Switch();
             Code2Switch();
@@ -617,26 +618,26 @@ namespace CTCS_test
         {
             double Brake = 0;
             int i;
-            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else if(Occupy[0] != -1) Occupy[0] = 0;
-            if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else if (Occupy[1] != -1) Occupy[1] = 0;
-            if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else if (Occupy[2] != -1) Occupy[2] = 0;
-            if (Xp > 287 && Xp < 417) { CodeNum[3] = Codes.HU; Occupy[3] = 1; } else if (Occupy[3] != -1) Occupy[3] = 0;
-            if (Xp > 367 && Xp < 497) { CodeNum[4] = Codes.HU; Occupy[4] = 1; } else if (Occupy[4] != -1) Occupy[4] = 0;
-            if (Xp > 447 && Xp < 577) { CodeNum[5] = Codes.HU; Occupy[5] = 1; } else if (Occupy[5] != -1) Occupy[5] = 0;
-            if (Xp > 527 && Xp < 657) { CodeNum[6] = Codes.HU; Occupy[6] = 1; } else if (Occupy[6] != -1) Occupy[6] = 0;
-            if (Xp > 607 && Xp < 737) { CodeNum[7] = Codes.HU; Occupy[7] = 1; } else if (Occupy[7] != -1) Occupy[7] = 0;
-            if (Xp > 687 && Xp < 817) { CodeNum[8] = Codes.HU; Occupy[8] = 1; } else if (Occupy[8] != -1) Occupy[8] = 0;
-            if (Xp > 767 && Xp < 897) { CodeNum[9] = Codes.HU; Occupy[9] = 1; } else if (Occupy[9] != -1) Occupy[9] = 0;
-            if (Xp > 847 && Xp < 977) { CodeNum[10] = Codes.HU; Occupy[10] = 1; } else if (Occupy[10] != -1) Occupy[10] = 0;
-            if (Xp > 927 && Xp < 1057) { CodeNum[11] = Codes.HU; Occupy[11] = 1; } else if (Occupy[11] != -1) Occupy[11] = 0;
-            if (Xp > 1007 && Xp < 1137) { CodeNum[12] = Codes.HU; Occupy[12] = 1; } else if (Occupy[12] != -1) Occupy[12] = 0;
-            if (Xp > 1087 && Xp < 1217) { CodeNum[13] = Codes.HU; Occupy[13] = 1; } else if (Occupy[13] != -1) Occupy[13] = 0;
-            if (Xp > 1167 && Xp < 1297) { CodeNum[14] = Codes.HU; Occupy[14] = 1; } else if (Occupy[14] != -1) Occupy[14] = 0;
-            if (Xp > 1247 && Xp < 1377) { CodeNum[15] = Codes.HU; Occupy[15] = 1; } else if (Occupy[15] != -1) Occupy[15] = 0;
-            if (Xp > 1327 && Xp < 1457) { CodeNum[16] = Codes.HU; Occupy[16] = 1; } else if (Occupy[16] != -1) Occupy[16] = 0;
-            if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else if (Occupy[17] != -1) Occupy[17] = 0;
-            if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else if (Occupy[18] != -1) Occupy[18] = 0;
-            if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else if (Occupy[19] != -1) Occupy[19] = 0;
+            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else if(Occupy[0] == 1) Occupy[0] = 0;
+            if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else if (Occupy[1] == 1) Occupy[1] = 0;
+            if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else if (Occupy[2] == 1) Occupy[2] = 0;
+            if (Xp > 287 && Xp < 417) { CodeNum[3] = Codes.HU; Occupy[3] = 1; } else if (Occupy[3] == 1) Occupy[3] = 0;
+            if (Xp > 367 && Xp < 497) { CodeNum[4] = Codes.HU; Occupy[4] = 1; } else if (Occupy[4] == 1) Occupy[4] = 0;
+            if (Xp > 447 && Xp < 577) { CodeNum[5] = Codes.HU; Occupy[5] = 1; } else if (Occupy[5] == 1) Occupy[5] = 0;
+            if (Xp > 527 && Xp < 657) { CodeNum[6] = Codes.HU; Occupy[6] = 1; } else if (Occupy[6] == 1) Occupy[6] = 0;
+            if (Xp > 607 && Xp < 737) { CodeNum[7] = Codes.HU; Occupy[7] = 1; } else if (Occupy[7] == 1) Occupy[7] = 0;
+            if (Xp > 687 && Xp < 817) { CodeNum[8] = Codes.HU; Occupy[8] = 1; } else if (Occupy[8] == 1) Occupy[8] = 0;
+            if (Xp > 767 && Xp < 897) { CodeNum[9] = Codes.HU; Occupy[9] = 1; } else if (Occupy[9] == 1) Occupy[9] = 0;
+            if (Xp > 847 && Xp < 977) { CodeNum[10] = Codes.HU; Occupy[10] = 1; } else if (Occupy[10] == 1) Occupy[10] = 0;
+            if (Xp > 927 && Xp < 1057) { CodeNum[11] = Codes.HU; Occupy[11] = 1; } else if (Occupy[11] == 1) Occupy[11] = 0;
+            if (Xp > 1007 && Xp < 1137) { CodeNum[12] = Codes.HU; Occupy[12] = 1; } else if (Occupy[12] == 1) Occupy[12] = 0;
+            if (Xp > 1087 && Xp < 1217) { CodeNum[13] = Codes.HU; Occupy[13] = 1; } else if (Occupy[13] == 1) Occupy[13] = 0;
+            if (Xp > 1167 && Xp < 1297) { CodeNum[14] = Codes.HU; Occupy[14] = 1; } else if (Occupy[14] == 1) Occupy[14] = 0;
+            if (Xp > 1247 && Xp < 1377) { CodeNum[15] = Codes.HU; Occupy[15] = 1; } else if (Occupy[15] == 1) Occupy[15] = 0;
+            if (Xp > 1327 && Xp < 1457) { CodeNum[16] = Codes.HU; Occupy[16] = 1; } else if (Occupy[16] == 1) Occupy[16] = 0;
+            if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else if (Occupy[17] == 1) Occupy[17] = 0;
+            if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else if (Occupy[18] == 1) Occupy[18] = 0;
+            if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else if (Occupy[19] == 1) Occupy[19] = 0;
 
             for (i = 22; i > 0; i--)
             {
@@ -712,14 +713,16 @@ namespace CTCS_test
             }
             else
             {
+                listBox1.Items.Clear();
                 button3.PerformClick();
                 button1.Text = "重新发车";
                 for (int i = 22; i >= 0; i--)
                 {
                     if (radioButton1.Checked) Type[i] = Types.ZXZX;
-                    if (radioButton2.Checked) Type[i] = Types.CXZX;
-                    if (radioButton3.Checked) Type[i] = Types.ZXCX;
-                    if (radioButton4.Checked) Type[i] = Types.CXCX;
+                    else if (radioButton2.Checked) Type[i] = Types.CXZX;
+                    else if (radioButton3.Checked) Type[i] = Types.ZXCX;
+                    else Type[i] = Types.CXCX;
+                    if (Occupy[i] == -1) listBox1.Items.Add("轨道区段"+(i+1).ToString()+"故障占用");
                 }
                 V = 0;
                 Xp = 200;
@@ -854,11 +857,13 @@ namespace CTCS_test
             {
                 CodeNum[4] = Codes.L;
                 Occupy[4] = 0;
+                listBox1.Items.Add("轨道区段5故障占用解除");
             }
             else
             {
                 CodeNum[4] = Codes.HU;
                 Occupy[4] = -1;
+                listBox1.Items.Add("轨道区段5故障占用");
             }
         }
 
@@ -868,11 +873,13 @@ namespace CTCS_test
             {
                 CodeNum[5] = Codes.L;
                 Occupy[5] = 0;
+                listBox1.Items.Add("轨道区段6故障占用解除");
             }
             else
             {
                 CodeNum[5] = Codes.HU;
                 Occupy[5] = -1;
+                listBox1.Items.Add("轨道区段6故障占用");
             }
         }
 
@@ -882,11 +889,13 @@ namespace CTCS_test
             {
                 CodeNum[6] = Codes.L;
                 Occupy[6] = 0;
+                listBox1.Items.Add("轨道区段7故障占用解除");
             }
             else
             {
                 CodeNum[6] = Codes.HU;
                 Occupy[6] = -1;
+                listBox1.Items.Add("轨道区段7故障占用");
             }
         }
         private void Code8_Click(object sender, EventArgs e)
@@ -895,11 +904,13 @@ namespace CTCS_test
             {
                 CodeNum[7] = Codes.L;
                 Occupy[7] = 0;
+                listBox1.Items.Add("轨道区段8故障占用解除");
             }
             else
             {
                 CodeNum[7] = Codes.HU;
                 Occupy[7] = -1;
+                listBox1.Items.Add("轨道区段8故障占用");
             }
         }
 
@@ -909,11 +920,13 @@ namespace CTCS_test
             {
                 CodeNum[8] = Codes.L;
                 Occupy[8] = 0;
+                listBox1.Items.Add("轨道区段9故障占用解除");
             }
             else
             {
                 CodeNum[8] = Codes.HU;
                 Occupy[8] = -1;
+                listBox1.Items.Add("轨道区段9故障占用");
             }
         }
 
@@ -923,11 +936,13 @@ namespace CTCS_test
             {
                 CodeNum[9] = Codes.L;
                 Occupy[9] = 0;
+                listBox1.Items.Add("轨道区段10故障占用解除");
             }
             else
             {
                 CodeNum[9] = Codes.HU;
                 Occupy[9] = -1;
+                listBox1.Items.Add("轨道区段10故障占用");
             }
         }
 
@@ -937,11 +952,13 @@ namespace CTCS_test
             {
                 CodeNum[10] = Codes.L;
                 Occupy[10] = 0;
+                listBox1.Items.Add("轨道区段11故障占用解除");
             }
             else
             {
                 CodeNum[10] = Codes.HU;
                 Occupy[10] = -1;
+                listBox1.Items.Add("轨道区段11故障占用");
             }
         }
 
@@ -951,11 +968,13 @@ namespace CTCS_test
             {
                 CodeNum[11] = Codes.L;
                 Occupy[11] = 0;
+                listBox1.Items.Add("轨道区段12故障占用解除");
             }
             else
             {
                 CodeNum[11] = Codes.HU;
                 Occupy[11] = -1;
+                listBox1.Items.Add("轨道区段12故障占用");
             }
         }
 
@@ -965,11 +984,13 @@ namespace CTCS_test
             {
                 CodeNum[12] = Codes.L;
                 Occupy[12] = 0;
+                listBox1.Items.Add("轨道区段13故障占用解除");
             }
             else
             {
                 CodeNum[12] = Codes.HU;
                 Occupy[12] = -1;
+                listBox1.Items.Add("轨道区段13故障占用");
             }
         }
 
@@ -979,11 +1000,13 @@ namespace CTCS_test
             {
                 CodeNum[13] = Codes.L;
                 Occupy[13] = 0;
+                listBox1.Items.Add("轨道区段14故障占用解除");
             }
             else
             {
                 CodeNum[13] = Codes.HU;
                 Occupy[13] = -1;
+                listBox1.Items.Add("轨道区段14故障占用");
             }
         }
 
@@ -993,11 +1016,13 @@ namespace CTCS_test
             {
                 CodeNum[14] = Codes.L;
                 Occupy[14] = 0;
+                listBox1.Items.Add("轨道区段15故障占用解除");
             }
             else
             {
                 CodeNum[14] = Codes.HU;
                 Occupy[14] = -1;
+                listBox1.Items.Add("轨道区段15故障占用");
             }
         }
 
@@ -1007,11 +1032,13 @@ namespace CTCS_test
             {
                 CodeNum[15] = Codes.L;
                 Occupy[15] = 0;
+                listBox1.Items.Add("轨道区段16故障占用解除");
             }
             else
             {
                 CodeNum[15] = Codes.HU;
                 Occupy[15] = -1;
+                listBox1.Items.Add("轨道区段16故障占用");
             }
         }
 
@@ -1021,11 +1048,13 @@ namespace CTCS_test
             {
                 CodeNum[16] = Codes.L;
                 Occupy[16] = 0;
+                listBox1.Items.Add("轨道区段17故障占用解除");
             }
             else
             {
                 CodeNum[16] = Codes.HU;
                 Occupy[16] = -1;
+                listBox1.Items.Add("轨道区段17故障占用");
             }
         }
 
@@ -1035,11 +1064,13 @@ namespace CTCS_test
             {
                 CodeNum[17] = Codes.L;
                 Occupy[17] = 0;
+                listBox1.Items.Add("轨道区段18故障占用解除");
             }
             else
             {
                 CodeNum[17] = Codes.HU;
                 Occupy[17] = -1;
+                listBox1.Items.Add("轨道区段18故障占用");
             }
         }
 
@@ -1049,11 +1080,13 @@ namespace CTCS_test
             {
                 CodeNum[18] = Codes.L;
                 Occupy[18] = 0;
+                listBox1.Items.Add("轨道区段19故障占用解除");
             }
             else
             {
                 CodeNum[18] = Codes.HU;
                 Occupy[18] = -1;
+                listBox1.Items.Add("轨道区段19故障占用");
             }
         }
 
