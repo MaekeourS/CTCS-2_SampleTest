@@ -84,6 +84,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Light1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light3)).BeginInit();
@@ -322,7 +323,7 @@
             this.Code7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code7.Location = new System.Drawing.Point(494, 454);
             this.Code7.Name = "Code7";
-            this.Code7.Size = new System.Drawing.Size(84, 28);
+            this.Code7.Size = new System.Drawing.Size(86, 28);
             this.Code7.TabIndex = 18;
             this.Code7.TabStop = false;
             this.Code7.Click += new System.EventHandler(this.Code7_Click);
@@ -344,7 +345,7 @@
             this.Code9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code9.Location = new System.Drawing.Point(656, 454);
             this.Code9.Name = "Code9";
-            this.Code9.Size = new System.Drawing.Size(84, 28);
+            this.Code9.Size = new System.Drawing.Size(86, 28);
             this.Code9.TabIndex = 20;
             this.Code9.TabStop = false;
             this.Code9.Click += new System.EventHandler(this.Code9_Click);
@@ -596,7 +597,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(48, 534);
+            this.button1.Location = new System.Drawing.Point(374, 535);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 107);
             this.button1.TabIndex = 44;
@@ -606,8 +607,9 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(48, 681);
+            this.button2.Location = new System.Drawing.Point(374, 675);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 106);
             this.button2.TabIndex = 45;
@@ -618,7 +620,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(281, 681);
+            this.button3.Location = new System.Drawing.Point(607, 535);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(186, 106);
             this.button3.TabIndex = 46;
@@ -629,9 +631,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(281, 536);
+            this.radioButton1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButton1.Location = new System.Drawing.Point(35, 535);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(186, 22);
+            this.radioButton1.Size = new System.Drawing.Size(308, 45);
             this.radioButton1.TabIndex = 47;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "正线发车 正线接车";
@@ -641,9 +644,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(281, 564);
+            this.radioButton2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButton2.Location = new System.Drawing.Point(35, 596);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(186, 22);
+            this.radioButton2.Size = new System.Drawing.Size(308, 45);
             this.radioButton2.TabIndex = 48;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "侧线发车 正线接车";
@@ -653,9 +657,10 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(281, 592);
+            this.radioButton3.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButton3.Location = new System.Drawing.Point(35, 675);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(186, 22);
+            this.radioButton3.Size = new System.Drawing.Size(308, 45);
             this.radioButton3.TabIndex = 49;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "正线发车 侧线接车";
@@ -665,9 +670,10 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(281, 620);
+            this.radioButton4.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButton4.Location = new System.Drawing.Point(35, 736);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(186, 22);
+            this.radioButton4.Size = new System.Drawing.Size(308, 45);
             this.radioButton4.TabIndex = 50;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "侧线发车 侧线接车";
@@ -676,13 +682,25 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(520, 531);
+            this.listBox1.ItemHeight = 27;
+            this.listBox1.Location = new System.Drawing.Point(844, 535);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(429, 256);
+            this.listBox1.Size = new System.Drawing.Size(429, 247);
             this.listBox1.TabIndex = 51;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4.Location = new System.Drawing.Point(607, 675);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(186, 107);
+            this.button4.TabIndex = 52;
+            this.button4.Text = "清除失效事件";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -692,6 +710,7 @@
             this.BackgroundImage = global::CTCS_test.Properties.Resources.BACK2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1894, 1012);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -858,6 +877,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

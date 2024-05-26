@@ -54,7 +54,6 @@ namespace CTCS_test
                     CodeNum[i] = Codes.UU;
                 }
             }
-            listBox1.TopIndex = listBox1.Items.Count - 1;
             Train1Moving();
             Code1Switch();
             Code2Switch();
@@ -97,521 +96,522 @@ namespace CTCS_test
             Light16Switch();
             Light17Switch();
             Light18Switch();
-            Light18Switch();
+            Light19Switch();
+            listBox1.TopIndex = listBox1.Items.Count - 1;
             label1.Text = "Speed:"+V.ToString()+"km/h";
         }
 
         private void Code1Switch()
         {
-            if (CodeNum[0] == Codes.HU) Code1.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[0] == Codes.UU) Code1.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[0] == Codes.U) Code1.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[0] == Codes.U2) Code1.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[0] == Codes.LU) Code1.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[0] == Codes.L) Code1.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[0] == Codes.L2) Code1.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[0] == Codes.L3) Code1.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[0] == Codes.L4) Code1.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[0] == Codes.L5) Code1.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[0] == Codes.HU) Code1.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[0] == Codes.UU) Code1.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[0] == Codes.U) Code1.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[0] == Codes.U2) Code1.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[0] == Codes.LU) Code1.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[0] == Codes.L) Code1.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[0] == Codes.L2) Code1.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[0] == Codes.L3) Code1.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[0] == Codes.L4) Code1.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[0] == Codes.L5) Code1.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code2Switch()
         {
-            if (CodeNum[1] == Codes.HU) Code2.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[1] == Codes.UU) Code2.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[1] == Codes.U) Code2.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[1] == Codes.U2) Code2.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[1] == Codes.LU) Code2.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[1] == Codes.L) Code2.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[1] == Codes.L2) Code2.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[1] == Codes.L3) Code2.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[1] == Codes.L4) Code2.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[1] == Codes.L5) Code2.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[1] == Codes.HU) Code2.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[1] == Codes.UU) Code2.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[1] == Codes.U) Code2.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[1] == Codes.U2) Code2.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[1] == Codes.LU) Code2.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[1] == Codes.L) Code2.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[1] == Codes.L2) Code2.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[1] == Codes.L3) Code2.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[1] == Codes.L4) Code2.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[1] == Codes.L5) Code2.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code3Switch()
         {
-            if (CodeNum[2] == Codes.HU) Code3.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[2] == Codes.UU) Code3.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[2] == Codes.U) Code3.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[2] == Codes.U2) Code3.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[2] == Codes.LU) Code3.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[2] == Codes.L) Code3.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[2] == Codes.L2) Code3.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[2] == Codes.L3) Code3.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[2] == Codes.L4) Code3.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[2] == Codes.L5) Code3.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[2] == Codes.HU) Code3.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[2] == Codes.UU) Code3.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[2] == Codes.U) Code3.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[2] == Codes.U2) Code3.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[2] == Codes.LU) Code3.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[2] == Codes.L) Code3.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[2] == Codes.L2) Code3.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[2] == Codes.L3) Code3.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[2] == Codes.L4) Code3.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[2] == Codes.L5) Code3.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code4Switch()
         {
-            if (CodeNum[3] == Codes.HU) Code4.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[3] == Codes.UU) Code4.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[3] == Codes.U) Code4.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[3] == Codes.U2) Code4.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[3] == Codes.LU) Code4.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[3] == Codes.L) Code4.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[3] == Codes.L2) Code4.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[3] == Codes.L3) Code4.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[3] == Codes.L4) Code4.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[3] == Codes.L5) Code4.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[3] == Codes.HU) Code4.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[3] == Codes.UU) Code4.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[3] == Codes.U) Code4.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[3] == Codes.U2) Code4.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[3] == Codes.LU) Code4.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[3] == Codes.L) Code4.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[3] == Codes.L2) Code4.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[3] == Codes.L3) Code4.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[3] == Codes.L4) Code4.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[3] == Codes.L5) Code4.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code5Switch()
         {
-            if (CodeNum[4] == Codes.HU) Code5.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[4] == Codes.UU) Code5.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[4] == Codes.U) Code5.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[4] == Codes.U2) Code5.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[4] == Codes.LU) Code5.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[4] == Codes.L) Code5.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[4] == Codes.L2) Code5.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[4] == Codes.L3) Code5.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[4] == Codes.L4) Code5.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[4] == Codes.L5) Code5.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[4] == Codes.HU) Code5.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[4] == Codes.UU) Code5.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[4] == Codes.U) Code5.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[4] == Codes.U2) Code5.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[4] == Codes.LU) Code5.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[4] == Codes.L) Code5.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[4] == Codes.L2) Code5.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[4] == Codes.L3) Code5.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[4] == Codes.L4) Code5.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[4] == Codes.L5) Code5.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code6Switch()
         {
-            if (CodeNum[5] == Codes.HU) Code6.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[5] == Codes.UU) Code6.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[5] == Codes.U) Code6.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[5] == Codes.U2) Code6.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[5] == Codes.LU) Code6.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[5] == Codes.L) Code6.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[5] == Codes.L2) Code6.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[5] == Codes.L3) Code6.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[5] == Codes.L4) Code6.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[5] == Codes.L5) Code6.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[5] == Codes.HU) Code6.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[5] == Codes.UU) Code6.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[5] == Codes.U) Code6.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[5] == Codes.U2) Code6.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[5] == Codes.LU) Code6.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[5] == Codes.L) Code6.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[5] == Codes.L2) Code6.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[5] == Codes.L3) Code6.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[5] == Codes.L4) Code6.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[5] == Codes.L5) Code6.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code7Switch()
         {
-            if (CodeNum[6] == Codes.HU) Code7.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[6] == Codes.UU) Code7.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[6] == Codes.U) Code7.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[6] == Codes.U2) Code7.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[6] == Codes.LU) Code7.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[6] == Codes.L) Code7.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[6] == Codes.L2) Code7.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[6] == Codes.L3) Code7.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[6] == Codes.L4) Code7.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[6] == Codes.L5) Code7.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[6] == Codes.HU) Code7.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[6] == Codes.UU) Code7.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[6] == Codes.U) Code7.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[6] == Codes.U2) Code7.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[6] == Codes.LU) Code7.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[6] == Codes.L) Code7.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[6] == Codes.L2) Code7.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[6] == Codes.L3) Code7.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[6] == Codes.L4) Code7.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[6] == Codes.L5) Code7.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code8Switch()
         {
-            if (CodeNum[7] == Codes.HU) Code8.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[7] == Codes.UU) Code8.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[7] == Codes.U) Code8.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[7] == Codes.U2) Code8.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[7] == Codes.LU) Code8.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[7] == Codes.L) Code8.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[7] == Codes.L2) Code8.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[7] == Codes.L3) Code8.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[7] == Codes.L4) Code8.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[7] == Codes.L5) Code8.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[7] == Codes.HU) Code8.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[7] == Codes.UU) Code8.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[7] == Codes.U) Code8.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[7] == Codes.U2) Code8.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[7] == Codes.LU) Code8.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[7] == Codes.L) Code8.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[7] == Codes.L2) Code8.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[7] == Codes.L3) Code8.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[7] == Codes.L4) Code8.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[7] == Codes.L5) Code8.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code9Switch()
         {
-            if (CodeNum[8] == Codes.HU) Code9.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[8] == Codes.UU) Code9.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[8] == Codes.U) Code9.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[8] == Codes.U2) Code9.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[8] == Codes.LU) Code9.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[8] == Codes.L) Code9.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[8] == Codes.L2) Code9.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[8] == Codes.L3) Code9.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[8] == Codes.L4) Code9.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[8] == Codes.L5) Code9.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[8] == Codes.HU) Code9.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[8] == Codes.UU) Code9.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[8] == Codes.U) Code9.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[8] == Codes.U2) Code9.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[8] == Codes.LU) Code9.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[8] == Codes.L) Code9.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[8] == Codes.L2) Code9.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[8] == Codes.L3) Code9.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[8] == Codes.L4) Code9.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[8] == Codes.L5) Code9.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code10Switch()
         {
-            if (CodeNum[9] == Codes.HU) Code10.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[9] == Codes.UU) Code10.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[9] == Codes.U) Code10.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[9] == Codes.U2) Code10.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[9] == Codes.LU) Code10.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[9] == Codes.L) Code10.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[9] == Codes.L2) Code10.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[9] == Codes.L3) Code10.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[9] == Codes.L4) Code10.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[9] == Codes.L5) Code10.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[9] == Codes.HU) Code10.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[9] == Codes.UU) Code10.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[9] == Codes.U) Code10.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[9] == Codes.U2) Code10.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[9] == Codes.LU) Code10.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[9] == Codes.L) Code10.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[9] == Codes.L2) Code10.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[9] == Codes.L3) Code10.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[9] == Codes.L4) Code10.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[9] == Codes.L5) Code10.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code11Switch()
         {
-            if (CodeNum[10] == Codes.HU) Code11.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[10] == Codes.UU) Code11.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[10] == Codes.U) Code11.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[10] == Codes.U2) Code11.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[10] == Codes.LU) Code11.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[10] == Codes.L) Code11.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[10] == Codes.L2) Code11.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[10] == Codes.L3) Code11.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[10] == Codes.L4) Code11.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[10] == Codes.L5) Code11.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[10] == Codes.HU) Code11.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[10] == Codes.UU) Code11.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[10] == Codes.U) Code11.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[10] == Codes.U2) Code11.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[10] == Codes.LU) Code11.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[10] == Codes.L) Code11.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[10] == Codes.L2) Code11.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[10] == Codes.L3) Code11.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[10] == Codes.L4) Code11.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[10] == Codes.L5) Code11.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code12Switch()
         {
-            if (CodeNum[11] == Codes.HU) Code12.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[11] == Codes.UU) Code12.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[11] == Codes.U) Code12.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[11] == Codes.U2) Code12.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[11] == Codes.LU) Code12.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[11] == Codes.L) Code12.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[11] == Codes.L2) Code12.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[11] == Codes.L3) Code12.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[11] == Codes.L4) Code12.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[11] == Codes.L5) Code12.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[11] == Codes.HU) Code12.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[11] == Codes.UU) Code12.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[11] == Codes.U) Code12.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[11] == Codes.U2) Code12.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[11] == Codes.LU) Code12.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[11] == Codes.L) Code12.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[11] == Codes.L2) Code12.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[11] == Codes.L3) Code12.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[11] == Codes.L4) Code12.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[11] == Codes.L5) Code12.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code13Switch()
         {
-            if (CodeNum[12] == Codes.HU) Code13.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[12] == Codes.UU) Code13.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[12] == Codes.U) Code13.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[12] == Codes.U2) Code13.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[12] == Codes.LU) Code13.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[12] == Codes.L) Code13.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[12] == Codes.L2) Code13.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[12] == Codes.L3) Code13.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[12] == Codes.L4) Code13.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[12] == Codes.L5) Code13.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[12] == Codes.HU) Code13.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[12] == Codes.UU) Code13.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[12] == Codes.U) Code13.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[12] == Codes.U2) Code13.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[12] == Codes.LU) Code13.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[12] == Codes.L) Code13.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[12] == Codes.L2) Code13.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[12] == Codes.L3) Code13.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[12] == Codes.L4) Code13.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[12] == Codes.L5) Code13.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code14Switch()
         {
-            if (CodeNum[13] == Codes.HU) Code14.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[13] == Codes.UU) Code14.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[13] == Codes.U) Code14.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[13] == Codes.U2) Code14.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[13] == Codes.LU) Code14.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[13] == Codes.L) Code14.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[13] == Codes.L2) Code14.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[13] == Codes.L3) Code14.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[13] == Codes.L4) Code14.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[13] == Codes.L5) Code14.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[13] == Codes.HU) Code14.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[13] == Codes.UU) Code14.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[13] == Codes.U) Code14.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[13] == Codes.U2) Code14.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[13] == Codes.LU) Code14.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[13] == Codes.L) Code14.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[13] == Codes.L2) Code14.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[13] == Codes.L3) Code14.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[13] == Codes.L4) Code14.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[13] == Codes.L5) Code14.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code15Switch()
         {
-            if (CodeNum[14] == Codes.HU) Code15.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[14] == Codes.UU) Code15.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[14] == Codes.U) Code15.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[14] == Codes.U2) Code15.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[14] == Codes.LU) Code15.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[14] == Codes.L) Code15.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[14] == Codes.L2) Code15.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[14] == Codes.L3) Code15.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[14] == Codes.L4) Code15.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[14] == Codes.L5) Code15.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[14] == Codes.HU) Code15.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[14] == Codes.UU) Code15.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[14] == Codes.U) Code15.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[14] == Codes.U2) Code15.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[14] == Codes.LU) Code15.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[14] == Codes.L) Code15.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[14] == Codes.L2) Code15.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[14] == Codes.L3) Code15.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[14] == Codes.L4) Code15.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[14] == Codes.L5) Code15.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code16Switch()
         {
-            if (CodeNum[15] == Codes.HU) Code16.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[15] == Codes.UU) Code16.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[15] == Codes.U) Code16.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[15] == Codes.U2) Code16.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[15] == Codes.LU) Code16.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[15] == Codes.L) Code16.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[15] == Codes.L2) Code16.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[15] == Codes.L3) Code16.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[15] == Codes.L4) Code16.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[15] == Codes.L5) Code16.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[15] == Codes.HU) Code16.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[15] == Codes.UU) Code16.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[15] == Codes.U) Code16.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[15] == Codes.U2) Code16.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[15] == Codes.LU) Code16.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[15] == Codes.L) Code16.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[15] == Codes.L2) Code16.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[15] == Codes.L3) Code16.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[15] == Codes.L4) Code16.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[15] == Codes.L5) Code16.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code17Switch()
         {
-            if (CodeNum[16] == Codes.HU) Code17.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[16] == Codes.UU) Code17.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[16] == Codes.U) Code17.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[16] == Codes.U2) Code17.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[16] == Codes.LU) Code17.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[16] == Codes.L) Code17.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[16] == Codes.L2) Code17.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[16] == Codes.L3) Code17.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[16] == Codes.L4) Code17.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[16] == Codes.L5) Code17.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[16] == Codes.HU) Code17.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[16] == Codes.UU) Code17.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[16] == Codes.U) Code17.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[16] == Codes.U2) Code17.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[16] == Codes.LU) Code17.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[16] == Codes.L) Code17.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[16] == Codes.L2) Code17.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[16] == Codes.L3) Code17.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[16] == Codes.L4) Code17.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[16] == Codes.L5) Code17.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code18Switch()
         {
-            if (CodeNum[17] == Codes.HU) Code18.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[17] == Codes.UU) Code18.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[17] == Codes.U) Code18.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[17] == Codes.U2) Code18.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[17] == Codes.LU) Code18.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[17] == Codes.L) Code18.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[17] == Codes.L2) Code18.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[17] == Codes.L3) Code18.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[17] == Codes.L4) Code18.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[17] == Codes.L5) Code18.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[17] == Codes.HU) Code18.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[17] == Codes.UU) Code18.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[17] == Codes.U) Code18.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[17] == Codes.U2) Code18.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[17] == Codes.LU) Code18.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[17] == Codes.L) Code18.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[17] == Codes.L2) Code18.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[17] == Codes.L3) Code18.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[17] == Codes.L4) Code18.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[17] == Codes.L5) Code18.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code19Switch()
         {
-            if (CodeNum[18] == Codes.HU) Code19.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[18] == Codes.UU) Code19.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[18] == Codes.U) Code19.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[18] == Codes.U2) Code19.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[18] == Codes.LU) Code19.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[18] == Codes.L) Code19.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[18] == Codes.L2) Code19.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[18] == Codes.L3) Code19.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[18] == Codes.L4) Code19.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[18] == Codes.L5) Code19.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[18] == Codes.HU) Code19.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[18] == Codes.UU) Code19.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[18] == Codes.U) Code19.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[18] == Codes.U2) Code19.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[18] == Codes.LU) Code19.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[18] == Codes.L) Code19.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[18] == Codes.L2) Code19.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[18] == Codes.L3) Code19.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[18] == Codes.L4) Code19.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[18] == Codes.L5) Code19.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code20Switch()
         {
-            if (CodeNum[19] == Codes.HU) Code20.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[19] == Codes.UU) Code20.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[19] == Codes.U) Code20.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[19] == Codes.U2) Code20.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[19] == Codes.LU) Code20.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[19] == Codes.L) Code20.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[19] == Codes.L2) Code20.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[19] == Codes.L3) Code20.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[19] == Codes.L4) Code20.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[19] == Codes.L5) Code20.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[19] == Codes.HU) Code20.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[19] == Codes.UU) Code20.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[19] == Codes.U) Code20.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[19] == Codes.U2) Code20.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[19] == Codes.LU) Code20.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[19] == Codes.L) Code20.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[19] == Codes.L2) Code20.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[19] == Codes.L3) Code20.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[19] == Codes.L4) Code20.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[19] == Codes.L5) Code20.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code21Switch()
         {
-            if (CodeNum[20] == Codes.HU) Code21.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[20] == Codes.UU) Code21.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[20] == Codes.U) Code21.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[20] == Codes.U2) Code21.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[20] == Codes.LU) Code21.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[20] == Codes.L) Code21.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[20] == Codes.L2) Code21.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[20] == Codes.L3) Code21.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[20] == Codes.L4) Code21.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[20] == Codes.L5) Code21.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[20] == Codes.HU) Code21.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[20] == Codes.UU) Code21.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[20] == Codes.U) Code21.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[20] == Codes.U2) Code21.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[20] == Codes.LU) Code21.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[20] == Codes.L) Code21.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[20] == Codes.L2) Code21.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[20] == Codes.L3) Code21.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[20] == Codes.L4) Code21.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[20] == Codes.L5) Code21.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code22Switch()
         {
-            if (CodeNum[21] == Codes.HU) Code22.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[21] == Codes.UU) Code22.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[21] == Codes.U) Code22.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[21] == Codes.U2) Code22.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[21] == Codes.LU) Code22.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[21] == Codes.L) Code22.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[21] == Codes.L2) Code22.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[21] == Codes.L3) Code22.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[21] == Codes.L4) Code22.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[21] == Codes.L5) Code22.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[21] == Codes.HU) Code22.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[21] == Codes.UU) Code22.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[21] == Codes.U) Code22.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[21] == Codes.U2) Code22.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[21] == Codes.LU) Code22.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[21] == Codes.L) Code22.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[21] == Codes.L2) Code22.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[21] == Codes.L3) Code22.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[21] == Codes.L4) Code22.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[21] == Codes.L5) Code22.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Code23Switch()
         {
-            if (CodeNum[22] == Codes.HU) Code23.BackgroundImage = CTCS_test.Properties.Resources.HUcode;
-            if (CodeNum[22] == Codes.UU) Code23.BackgroundImage = CTCS_test.Properties.Resources.UUcode;
-            if (CodeNum[22] == Codes.U) Code23.BackgroundImage = CTCS_test.Properties.Resources.Ucode;
-            if (CodeNum[22] == Codes.U2) Code23.BackgroundImage = CTCS_test.Properties.Resources.U2code;
-            if (CodeNum[22] == Codes.LU) Code23.BackgroundImage = CTCS_test.Properties.Resources.LUcode;
-            if (CodeNum[22] == Codes.L) Code23.BackgroundImage = CTCS_test.Properties.Resources.Lcode;
-            if (CodeNum[22] == Codes.L2) Code23.BackgroundImage = CTCS_test.Properties.Resources.L2code;
-            if (CodeNum[22] == Codes.L3) Code23.BackgroundImage = CTCS_test.Properties.Resources.L3code;
-            if (CodeNum[22] == Codes.L4) Code23.BackgroundImage = CTCS_test.Properties.Resources.L4code;
-            if (CodeNum[22] == Codes.L5) Code23.BackgroundImage = CTCS_test.Properties.Resources.L5code;
+            if (CodeNum[22] == Codes.HU) Code23.BackgroundImage = Properties.Resources.HUcode;
+            if (CodeNum[22] == Codes.UU) Code23.BackgroundImage = Properties.Resources.UUcode;
+            if (CodeNum[22] == Codes.U) Code23.BackgroundImage = Properties.Resources.Ucode;
+            if (CodeNum[22] == Codes.U2) Code23.BackgroundImage = Properties.Resources.U2code;
+            if (CodeNum[22] == Codes.LU) Code23.BackgroundImage = Properties.Resources.LUcode;
+            if (CodeNum[22] == Codes.L) Code23.BackgroundImage = Properties.Resources.Lcode;
+            if (CodeNum[22] == Codes.L2) Code23.BackgroundImage = Properties.Resources.L2code;
+            if (CodeNum[22] == Codes.L3) Code23.BackgroundImage = Properties.Resources.L3code;
+            if (CodeNum[22] == Codes.L4) Code23.BackgroundImage = Properties.Resources.L4code;
+            if (CodeNum[22] == Codes.L5) Code23.BackgroundImage = Properties.Resources.L5code;
         }
 
         private void Light1Switch()
         {
-            if (CodeNum[2] == Codes.HU) Light1.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[2] == Codes.UU) Light1.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[2] == Codes.U) Light1.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[2] == Codes.U2) Light1.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[2] == Codes.LU) Light1.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light1.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[2] == Codes.HU) Light1.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[2] == Codes.UU) Light1.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[2] == Codes.U) Light1.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[2] == Codes.U2) Light1.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[2] == Codes.LU) Light1.BackgroundImage = Properties.Resources.LU;
+            else Light1.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light2Switch()
         {
-            if (CodeNum[2] == Codes.HU) Light2.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[2] == Codes.UU) Light2.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[2] == Codes.U) Light2.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[2] == Codes.U2) Light2.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[2] == Codes.LU) Light2.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light2.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[2] == Codes.HU) Light2.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[2] == Codes.UU) Light2.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[2] == Codes.U) Light2.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[2] == Codes.U2) Light2.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[2] == Codes.LU) Light2.BackgroundImage = Properties.Resources.LU;
+            else Light2.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light3Switch()
         {
-            if (CodeNum[4] == Codes.HU) Light3.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[4] == Codes.UU) Light3.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[4] == Codes.U) Light3.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[4] == Codes.U2) Light3.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[4] == Codes.LU) Light3.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light3.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[4] == Codes.HU) Light3.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[4] == Codes.UU) Light3.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[4] == Codes.U) Light3.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[4] == Codes.U2) Light3.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[4] == Codes.LU) Light3.BackgroundImage = Properties.Resources.LU;
+            else Light3.BackgroundImage = Properties.Resources.L;
 
         }
 
         private void Light4Switch()
         {
-            if (CodeNum[5] == Codes.HU) Light4.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[5] == Codes.UU) Light4.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[5] == Codes.U) Light4.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[5] == Codes.U2) Light4.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[5] == Codes.LU) Light4.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light4.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[5] == Codes.HU) Light4.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[5] == Codes.UU) Light4.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[5] == Codes.U) Light4.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[5] == Codes.U2) Light4.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[5] == Codes.LU) Light4.BackgroundImage = Properties.Resources.LU;
+            else Light4.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light5Switch()
         {
-            if (CodeNum[6] == Codes.HU) Light5.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[6] == Codes.UU) Light5.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[6] == Codes.U) Light5.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[6] == Codes.U2) Light5.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[6] == Codes.LU) Light5.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light5.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[6] == Codes.HU) Light5.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[6] == Codes.UU) Light5.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[6] == Codes.U) Light5.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[6] == Codes.U2) Light5.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[6] == Codes.LU) Light5.BackgroundImage = Properties.Resources.LU;
+            else Light5.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light6Switch()
         {
-            if (CodeNum[7] == Codes.HU) Light6.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[7] == Codes.UU) Light6.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[7] == Codes.U) Light6.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[7] == Codes.U2) Light6.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[7] == Codes.LU) Light6.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light6.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[7] == Codes.HU) Light6.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[7] == Codes.UU) Light6.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[7] == Codes.U) Light6.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[7] == Codes.U2) Light6.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[7] == Codes.LU) Light6.BackgroundImage = Properties.Resources.LU;
+            else Light6.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light7Switch()
         {
-            if (CodeNum[8] == Codes.HU) Light7.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[8] == Codes.UU) Light7.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[8] == Codes.U) Light7.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[8] == Codes.U2) Light7.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[8] == Codes.LU) Light7.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light7.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[8] == Codes.HU) Light7.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[8] == Codes.UU) Light7.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[8] == Codes.U) Light7.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[8] == Codes.U2) Light7.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[8] == Codes.LU) Light7.BackgroundImage = Properties.Resources.LU;
+            else Light7.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light8Switch()
         {
-            if (CodeNum[9] == Codes.HU) Light8.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[9] == Codes.UU) Light8.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[9] == Codes.U) Light8.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[9] == Codes.U2) Light8.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[9] == Codes.LU) Light8.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light8.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[9] == Codes.HU) Light8.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[9] == Codes.UU) Light8.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[9] == Codes.U) Light8.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[9] == Codes.U2) Light8.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[9] == Codes.LU) Light8.BackgroundImage = Properties.Resources.LU;
+            else Light8.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light9Switch()
         {
-            if (CodeNum[10] == Codes.HU) Light9.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[10] == Codes.UU) Light9.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[10] == Codes.U) Light9.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[10] == Codes.U2) Light9.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[10] == Codes.LU) Light9.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light9.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[10] == Codes.HU) Light9.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[10] == Codes.UU) Light9.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[10] == Codes.U) Light9.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[10] == Codes.U2) Light9.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[10] == Codes.LU) Light9.BackgroundImage = Properties.Resources.LU;
+            else Light9.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light10Switch()
         {
-            if (CodeNum[11] == Codes.HU) Light10.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[11] == Codes.UU) Light10.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[11] == Codes.U) Light10.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[11] == Codes.U2) Light10.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[11] == Codes.LU) Light10.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light10.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[11] == Codes.HU) Light10.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[11] == Codes.UU) Light10.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[11] == Codes.U) Light10.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[11] == Codes.U2) Light10.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[11] == Codes.LU) Light10.BackgroundImage = Properties.Resources.LU;
+            else Light10.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light11Switch()
         {
-            if (CodeNum[12] == Codes.HU) Light11.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[12] == Codes.UU) Light11.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[12] == Codes.U) Light11.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[12] == Codes.U2) Light11.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[12] == Codes.LU) Light11.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light11.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[12] == Codes.HU) Light11.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[12] == Codes.UU) Light11.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[12] == Codes.U) Light11.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[12] == Codes.U2) Light11.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[12] == Codes.LU) Light11.BackgroundImage = Properties.Resources.LU;
+            else Light11.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light12Switch()
         {
-            if (CodeNum[13] == Codes.HU) Light12.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[13] == Codes.UU) Light12.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[13] == Codes.U) Light12.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[13] == Codes.U2) Light12.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[13] == Codes.LU) Light12.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light12.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[13] == Codes.HU) Light12.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[13] == Codes.UU) Light12.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[13] == Codes.U) Light12.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[13] == Codes.U2) Light12.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[13] == Codes.LU) Light12.BackgroundImage = Properties.Resources.LU;
+            else Light12.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light13Switch()
         {
-            if (CodeNum[14] == Codes.HU) Light13.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[14] == Codes.UU) Light13.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[14] == Codes.U) Light13.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[14] == Codes.U2) Light13.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[14] == Codes.LU) Light13.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light13.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[14] == Codes.HU) Light13.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[14] == Codes.UU) Light13.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[14] == Codes.U) Light13.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[14] == Codes.U2) Light13.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[14] == Codes.LU) Light13.BackgroundImage = Properties.Resources.LU;
+            else Light13.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light14Switch()
         {
-            if (CodeNum[15] == Codes.HU) Light14.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[15] == Codes.UU) Light14.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[15] == Codes.U) Light14.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[15] == Codes.U2) Light14.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[15] == Codes.LU) Light14.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light14.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[15] == Codes.HU) Light14.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[15] == Codes.UU) Light14.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[15] == Codes.U) Light14.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[15] == Codes.U2) Light14.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[15] == Codes.LU) Light14.BackgroundImage = Properties.Resources.LU;
+            else Light14.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light15Switch()
         {
-            if (CodeNum[16] == Codes.HU) Light15.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[16] == Codes.UU) Light15.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[16] == Codes.U) Light15.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[16] == Codes.U2) Light15.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[16] == Codes.LU) Light15.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light15.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[16] == Codes.HU) Light15.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[16] == Codes.UU) Light15.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[16] == Codes.U) Light15.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[16] == Codes.U2) Light15.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[16] == Codes.LU) Light15.BackgroundImage = Properties.Resources.LU;
+            else Light15.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light16Switch()
         {
-            if (CodeNum[17] == Codes.HU) Light16.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[17] == Codes.UU) Light16.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[17] == Codes.U) Light16.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[17] == Codes.U2) Light16.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[17] == Codes.LU) Light16.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light16.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[17] == Codes.HU) Light16.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[17] == Codes.UU) Light16.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[17] == Codes.U) Light16.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[17] == Codes.U2) Light16.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[17] == Codes.LU) Light16.BackgroundImage = Properties.Resources.LU;
+            else Light16.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light17Switch()
         {
-            if (CodeNum[18] == Codes.HU) Light17.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[18] == Codes.UU) Light17.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[18] == Codes.U) Light17.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[18] == Codes.U2) Light17.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[18] == Codes.LU) Light17.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light17.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[18] == Codes.HU) Light17.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[18] == Codes.UU) Light17.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[18] == Codes.U) Light17.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[18] == Codes.U2) Light17.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[18] == Codes.LU) Light17.BackgroundImage = Properties.Resources.LU;
+            else Light17.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light18Switch()
         {
-            if (CodeNum[21] == Codes.HU) Light18.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[21] == Codes.UU) Light18.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[21] == Codes.U) Light18.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[21] == Codes.U2) Light18.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[21] == Codes.LU) Light18.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light18.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[21] == Codes.HU) Light18.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[21] == Codes.UU) Light18.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[21] == Codes.U) Light18.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[21] == Codes.U2) Light18.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[21] == Codes.LU) Light18.BackgroundImage = Properties.Resources.LU;
+            else Light18.BackgroundImage = Properties.Resources.L;
         }
 
         private void Light19Switch()
         {
-            if (CodeNum[21] == Codes.HU) Light19.BackgroundImage = CTCS_test.Properties.Resources.H;
-            else if (CodeNum[21] == Codes.UU) Light19.BackgroundImage = CTCS_test.Properties.Resources.UU;
-            else if (CodeNum[21] == Codes.U) Light19.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[21] == Codes.U2) Light19.BackgroundImage = CTCS_test.Properties.Resources.U;
-            else if (CodeNum[21] == Codes.LU) Light19.BackgroundImage = CTCS_test.Properties.Resources.LU;
-            else Light19.BackgroundImage = CTCS_test.Properties.Resources.L;
+            if (CodeNum[21] == Codes.HU) Light19.BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[21] == Codes.UU) Light19.BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[21] == Codes.U) Light19.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[21] == Codes.U2) Light19.BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[21] == Codes.LU) Light19.BackgroundImage = Properties.Resources.LU;
+            else Light19.BackgroundImage = Properties.Resources.L;
         }
 
         private void Train1Moving()
@@ -660,7 +660,7 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         V -= Brake;
-                        if (V > 140) V = 140;
+                        if (V > 135) V = 135;
                         if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU) && Xp <= 1645 && V<=20)
                         {
                             Brake = 0;
@@ -713,16 +713,19 @@ namespace CTCS_test
             }
             else
             {
-                listBox1.Items.Clear();
+                if(button1.Text == "发车")
+                {
+                    button2.Enabled = true;
+                    button1.Text = "重新发车";
+                }
                 button3.PerformClick();
-                button1.Text = "重新发车";
+                button4.PerformClick();
                 for (int i = 22; i >= 0; i--)
                 {
                     if (radioButton1.Checked) Type[i] = Types.ZXZX;
                     else if (radioButton2.Checked) Type[i] = Types.CXZX;
                     else if (radioButton3.Checked) Type[i] = Types.ZXCX;
                     else Type[i] = Types.CXCX;
-                    if (Occupy[i] == -1) listBox1.Items.Add("轨道区段"+(i+1).ToString()+"故障占用");
                 }
                 V = 0;
                 Xp = 200;
@@ -1088,6 +1091,16 @@ namespace CTCS_test
                 Occupy[18] = -1;
                 listBox1.Items.Add("轨道区段19故障占用");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            for (int i = 22; i >= 0; i--)
+            {
+                if (Occupy[i] == -1) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
+            }
+            listBox1.TopIndex = listBox1.Items.Count - 1;
         }
 
         private void button3_Click(object sender, EventArgs e)
