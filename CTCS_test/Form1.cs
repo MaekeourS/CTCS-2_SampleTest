@@ -761,20 +761,6 @@ namespace CTCS_test
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
-            CodeNum[18] = Codes.U;
-            CodeNum[17] = Codes.LU;
-            //CodeNum[16] = Codes.LU;
-            for (int i = 16; i >= 0; i--)
-            {
-                if (CodeNum[i + 1] < Codes.L5)
-                {
-                    CodeNum[i] = CodeNum[i + 1] + 1;
-                }
-                else
-                {
-                    CodeNum[i] = Codes.L5;
-                }
-            }
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
@@ -784,20 +770,6 @@ namespace CTCS_test
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
-            CodeNum[18] = Codes.U;
-            CodeNum[17] = Codes.LU;
-            //CodeNum[16] = Codes.LU;
-            for (int i = 16; i >= 3; i--)
-            {
-                if (CodeNum[i + 1] < Codes.L5)
-                {
-                    CodeNum[i] = CodeNum[i + 1] + 1;
-                }
-                else
-                {
-                    CodeNum[i] = Codes.L5;
-                }
-            }
             CodeNum[2] = Codes.UU;
             CodeNum[1] = Codes.UU;
             CodeNum[0] = Codes.UU;
@@ -810,20 +782,6 @@ namespace CTCS_test
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
-            CodeNum[18] = Codes.UU;
-            CodeNum[17] = Codes.U2;
-            CodeNum[16] = Codes.LU;
-            for (int i = 15; i >= 0; i--)
-            {
-                if (CodeNum[i + 1] < Codes.L5)
-                {
-                    CodeNum[i] = CodeNum[i + 1] + 1;
-                }
-                else
-                {
-                    CodeNum[i] = Codes.L5;
-                }
-            }
         }
 
         private void radioButton4_Click(object sender, EventArgs e)
@@ -833,20 +791,6 @@ namespace CTCS_test
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
-            CodeNum[18] = Codes.UU;
-            CodeNum[17] = Codes.U2;
-            CodeNum[16] = Codes.LU;
-            for (int i = 15; i >= 3; i--)
-            {
-                if (CodeNum[i + 1] < Codes.L5)
-                {
-                    CodeNum[i] = CodeNum[i + 1] + 1;
-                }
-                else
-                {
-                    CodeNum[i] = Codes.L5;
-                }
-            }
             CodeNum[2] = Codes.UU;
             CodeNum[1] = Codes.UU;
             CodeNum[0] = Codes.UU;
