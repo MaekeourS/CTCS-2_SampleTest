@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
@@ -23,7 +24,7 @@ namespace CTCS_test
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
-        int[] lightCodes = { 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 21 };
+        int[] LightCodes = { 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 21 };
         double V = 0;
         int Xp = 200;
         int Yp = 343;
@@ -58,69 +59,65 @@ namespace CTCS_test
                 }
             }
             Train1Moving();
-            for (int i = 0; i < 23; i++)
+            for (int i = 1; i < 24; i++)
             {
                 CodeSwitch(i);
             }
             for (int i = 1; i <= 19; i++)
             {
-                LightSwitch(i, lightCodes[i - 1]);
+                LightSwitch(i, LightCodes[i - 1]);
             }
             listBox1.TopIndex = listBox1.Items.Count - 1;
             label1.Text = "Speed:"+V.ToString()+"km/h";
         }
 
 
-        private void CodeSwitch(int index)
+        private void CodeSwitch(int i)
         {
-            PictureBox pictureBox = Controls.Find("Code" + (index + 1), true).FirstOrDefault() as PictureBox;
-            if (pictureBox != null)
+            switch (CodeNum[i - 1])
             {
-                switch (CodeNum[index])
-                {
-                    case Codes.HU:
-                        pictureBox.BackgroundImage = Properties.Resources.HUcode;
-                        break;
-                    case Codes.UU:
-                        pictureBox.BackgroundImage = Properties.Resources.UUcode;
-                        break;
-                    case Codes.U:
-                        pictureBox.BackgroundImage = Properties.Resources.Ucode;
-                        break;
-                    case Codes.U2:
-                        pictureBox.BackgroundImage = Properties.Resources.U2code;
-                        break;
-                    case Codes.LU:
-                        pictureBox.BackgroundImage = Properties.Resources.LUcode;
-                        break;
-                    case Codes.L:
-                        pictureBox.BackgroundImage = Properties.Resources.Lcode;
-                        break;
-                    case Codes.L2:
-                        pictureBox.BackgroundImage = Properties.Resources.L2code;
-                        break;
-                    case Codes.L3:
-                        pictureBox.BackgroundImage = Properties.Resources.L3code;
-                        break;
-                    case Codes.L4:
-                        pictureBox.BackgroundImage = Properties.Resources.L4code;
-                        break;
-                    case Codes.L5:
-                        pictureBox.BackgroundImage = Properties.Resources.L5code;
-                        break;
-                    default:
-                        break;
-                }
+                case Codes.HU:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.HUcode;
+                    break;
+                case Codes.UU:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.UUcode;
+                    break;
+                case Codes.U:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.Ucode;
+                    break;
+                case Codes.U2:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.U2code;
+                    break;
+                case Codes.LU:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.LUcode;
+                    break;
+                case Codes.L:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.Lcode;
+                    break;
+                case Codes.L2:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.L2code;
+                    break;
+                case Codes.L3:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.L3code;
+                    break;
+                case Codes.L4:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.L4code;
+                    break;
+                case Codes.L5:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.L5code;
+                    break;
+                default:
+                    break;
             }
         }
-        private void LightSwitch(int lightIndex, int codeIndex)
+        private void LightSwitch(int Light, int Code)
         {
-            if (CodeNum[codeIndex] == Codes.HU) Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.H;
-            else if (CodeNum[codeIndex] == Codes.UU) Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.UU;
-            else if (CodeNum[codeIndex] == Codes.U) Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.U;
-            else if (CodeNum[codeIndex] == Codes.U2) Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.U;
-            else if (CodeNum[codeIndex] == Codes.LU) Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.LU;
-            else Controls["Light" + lightIndex].BackgroundImage = Properties.Resources.L;
+            if (CodeNum[Code] == Codes.HU) Controls["Light" + Light].BackgroundImage = Properties.Resources.H;
+            else if (CodeNum[Code] == Codes.UU) Controls["Light" + Light].BackgroundImage = Properties.Resources.UU;
+            else if (CodeNum[Code] == Codes.U) Controls["Light" + Light].BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[Code] == Codes.U2) Controls["Light" + Light].BackgroundImage = Properties.Resources.U;
+            else if (CodeNum[Code] == Codes.LU) Controls["Light" + Light].BackgroundImage = Properties.Resources.LU;
+            else Controls["Light" + Light].BackgroundImage = Properties.Resources.L;
         }
 
         private void Train1Moving()
@@ -218,9 +215,10 @@ namespace CTCS_test
         {
             if (!ZXF.Enabled || !CXF.Enabled)
             {
+                ZXF.Enabled = false;
+                CXF.Enabled = false;
                 if (button1.Text == "发车")
                 {
-                    button2.Enabled = true;
                     button1.Text = "重新发车";
                 }
                 button4.PerformClick();
@@ -231,11 +229,13 @@ namespace CTCS_test
                 Train1.Location = new Point(Xp, Yp);
                 timer1.Enabled = true;
                 timer2.Enabled = true;
+                button2.Enabled = true;
                 button2.Text = "暂停";
             }
             else
             {
-                MessageBox.Show("未选择发车股道", "错误！");
+                SystemSounds.Exclamation.Play();
+                MessageBox.Show("未选择发车股道", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -243,58 +243,21 @@ namespace CTCS_test
         private void button2_Click(object sender, EventArgs e)
         {
 
-                timer1.Enabled = !timer1.Enabled;
-                if (V > 0.1) timer2.Enabled = !timer2.Enabled;
-                if (timer1.Enabled) button2.Text = "暂停";
-                else
-                {
-                    button2.Text = "继续";
-                    label1.Text = "暂停中";
-                }
-        }
-
-
-
-        private void radioButton1_Click(object sender, EventArgs e)
-        {
-            for (int i = 3; i >= 0; i--) Type[i] = Types.ZX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
-        }
-
-        private void radioButton2_Click(object sender, EventArgs e)
-        {
-            for (int i = 3; i >= 0; i--) Type[i] = Types.CX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
-            CodeNum[2] = Codes.UU;
-            CodeNum[1] = Codes.UU;
-            CodeNum[0] = Codes.UU;
-        }
-
-        private void radioButton3_Click(object sender, EventArgs e)
-        {
-            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
-        }
-
-        private void radioButton4_Click(object sender, EventArgs e)
-        {
-            for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
-            CodeNum[2] = Codes.UU;
-            CodeNum[1] = Codes.UU;
-            CodeNum[0] = Codes.UU;
+            timer1.Enabled = !timer1.Enabled;
+            if (V > 0.1) timer2.Enabled = !timer2.Enabled;
+            if (timer1.Enabled)
+            {
+                ZXF.Enabled = false;
+                CXF.Enabled = false;
+                button2.Text = "暂停";
+            }
+            else
+            {
+                if(side1) ZXF.Enabled = true;
+                else CXF.Enabled = true;
+                button2.Text = "继续";
+                label1.Text = "暂停中";
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -316,6 +279,7 @@ namespace CTCS_test
             CodeNum[19] = Codes.HU;
             CXF.Enabled = true;
             ZXF.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void CXF_Click(object sender, EventArgs e)
@@ -330,6 +294,7 @@ namespace CTCS_test
             CodeNum[0] = Codes.UU;
             ZXF.Enabled = true;
             CXF.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void ZXJ_Click(object sender, EventArgs e)
