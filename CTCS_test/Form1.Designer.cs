@@ -85,6 +85,7 @@
             this.CXF = new System.Windows.Forms.Button();
             this.ZXJ = new System.Windows.Forms.Button();
             this.CXJ = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Light1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light3)).BeginInit();
@@ -128,6 +129,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Light18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Train1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Light1
@@ -694,12 +696,20 @@
             this.CXJ.UseVisualStyleBackColor = true;
             this.CXJ.Click += new System.EventHandler(this.CXJ_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CTCS_test.Properties.Resources.BACK2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1890, 1015);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::CTCS_test.Properties.Resources.BACK2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1894, 1012);
             this.Controls.Add(this.CXJ);
@@ -755,6 +765,7 @@
             this.Controls.Add(this.Light3);
             this.Controls.Add(this.Light2);
             this.Controls.Add(this.Light1);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -762,8 +773,8 @@
             this.MaximumSize = new System.Drawing.Size(1916, 1072);
             this.MinimumSize = new System.Drawing.Size(1488, 882);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "区间 CTCS-2 简单仿真";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Light1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light2)).EndInit();
@@ -808,6 +819,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Light18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Train1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,6 +882,7 @@
         private System.Windows.Forms.Button CXF;
         private System.Windows.Forms.Button ZXJ;
         private System.Windows.Forms.Button CXJ;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
