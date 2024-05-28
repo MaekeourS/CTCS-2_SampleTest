@@ -304,7 +304,7 @@
             this.Code5.Size = new System.Drawing.Size(83, 28);
             this.Code5.TabIndex = 16;
             this.Code5.TabStop = false;
-            this.Code5.Click += new System.EventHandler(this.Code5_Click);
+            this.Code5.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code6
             // 
@@ -315,7 +315,7 @@
             this.Code6.Size = new System.Drawing.Size(82, 28);
             this.Code6.TabIndex = 17;
             this.Code6.TabStop = false;
-            this.Code6.Click += new System.EventHandler(this.Code6_Click);
+            this.Code6.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code7
             // 
@@ -326,7 +326,7 @@
             this.Code7.Size = new System.Drawing.Size(86, 28);
             this.Code7.TabIndex = 18;
             this.Code7.TabStop = false;
-            this.Code7.Click += new System.EventHandler(this.Code7_Click);
+            this.Code7.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code8
             // 
@@ -337,7 +337,7 @@
             this.Code8.Size = new System.Drawing.Size(80, 28);
             this.Code8.TabIndex = 19;
             this.Code8.TabStop = false;
-            this.Code8.Click += new System.EventHandler(this.Code8_Click);
+            this.Code8.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code9
             // 
@@ -348,7 +348,7 @@
             this.Code9.Size = new System.Drawing.Size(86, 28);
             this.Code9.TabIndex = 20;
             this.Code9.TabStop = false;
-            this.Code9.Click += new System.EventHandler(this.Code9_Click);
+            this.Code9.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code10
             // 
@@ -359,7 +359,7 @@
             this.Code10.Size = new System.Drawing.Size(84, 28);
             this.Code10.TabIndex = 21;
             this.Code10.TabStop = false;
-            this.Code10.Click += new System.EventHandler(this.Code10_Click);
+            this.Code10.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code11
             // 
@@ -370,7 +370,7 @@
             this.Code11.Size = new System.Drawing.Size(84, 28);
             this.Code11.TabIndex = 22;
             this.Code11.TabStop = false;
-            this.Code11.Click += new System.EventHandler(this.Code11_Click);
+            this.Code11.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code12
             // 
@@ -381,7 +381,7 @@
             this.Code12.Size = new System.Drawing.Size(83, 28);
             this.Code12.TabIndex = 23;
             this.Code12.TabStop = false;
-            this.Code12.Click += new System.EventHandler(this.Code12_Click);
+            this.Code12.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code13
             // 
@@ -392,7 +392,7 @@
             this.Code13.Size = new System.Drawing.Size(83, 28);
             this.Code13.TabIndex = 24;
             this.Code13.TabStop = false;
-            this.Code13.Click += new System.EventHandler(this.Code13_Click);
+            this.Code13.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code14
             // 
@@ -403,7 +403,7 @@
             this.Code14.Size = new System.Drawing.Size(83, 28);
             this.Code14.TabIndex = 25;
             this.Code14.TabStop = false;
-            this.Code14.Click += new System.EventHandler(this.Code14_Click);
+            this.Code14.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code15
             // 
@@ -414,7 +414,7 @@
             this.Code15.Size = new System.Drawing.Size(83, 28);
             this.Code15.TabIndex = 26;
             this.Code15.TabStop = false;
-            this.Code15.Click += new System.EventHandler(this.Code15_Click);
+            this.Code15.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code16
             // 
@@ -425,7 +425,7 @@
             this.Code16.Size = new System.Drawing.Size(88, 28);
             this.Code16.TabIndex = 27;
             this.Code16.TabStop = false;
-            this.Code16.Click += new System.EventHandler(this.Code16_Click);
+            this.Code16.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code17
             // 
@@ -436,7 +436,7 @@
             this.Code17.Size = new System.Drawing.Size(80, 28);
             this.Code17.TabIndex = 28;
             this.Code17.TabStop = false;
-            this.Code17.Click += new System.EventHandler(this.Code17_Click);
+            this.Code17.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code18
             // 
@@ -447,7 +447,7 @@
             this.Code18.Size = new System.Drawing.Size(83, 28);
             this.Code18.TabIndex = 29;
             this.Code18.TabStop = false;
-            this.Code18.Click += new System.EventHandler(this.Code18_Click);
+            this.Code18.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code19
             // 
@@ -458,7 +458,7 @@
             this.Code19.Size = new System.Drawing.Size(84, 28);
             this.Code19.TabIndex = 30;
             this.Code19.TabStop = false;
-            this.Code19.Click += new System.EventHandler(this.Code19_Click);
+            this.Code19.Click += new System.EventHandler(this.Code_Click);
             // 
             // Code20
             // 
