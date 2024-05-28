@@ -28,7 +28,7 @@ namespace CTCS_test
         int Xp = 200;
         int Yp = 343;
         bool side1 = false, side2 = false;
-        int Location = 3;
+        int TrainLocation = 3;
         Codes[] ZXFM = { Codes.HU, Codes.U, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5, Codes.L5 };
         Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
         private void timer1_Tick(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace CTCS_test
                     Temp = i;
                 }
                 if (i == 18 && ZXJ.Enabled && CXJ.Enabled) j = 0;
-                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || Location > i) 
+                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i) 
                     CodeNum[i] = ZXFM[j];
                 else CodeNum[i] = CXFM[j]; 
             }
@@ -152,7 +152,7 @@ namespace CTCS_test
             {
                 if (Occupy[i] == 1)
                 {
-                    Location = i;
+                    TrainLocation = i;
                     if (CodeNum[i + 1] == Codes.LU)
                     {
                         Brake = 1;
@@ -235,7 +235,7 @@ namespace CTCS_test
             }
             else
             {
-                MessageBox.Show("未选择接发车模式", "错误！");
+                MessageBox.Show("未选择发车股道", "错误！");
             }
 
         }
@@ -598,5 +598,10 @@ namespace CTCS_test
             CXJ.Enabled = false;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ZXJ.Enabled = true;
+            CXJ.Enabled = true;
+        }
     }
 }

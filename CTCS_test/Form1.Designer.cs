@@ -597,7 +597,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(277, 535);
+            this.button1.Location = new System.Drawing.Point(281, 535);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 107);
             this.button1.TabIndex = 44;
@@ -609,7 +609,7 @@
             // 
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(277, 674);
+            this.button2.Location = new System.Drawing.Point(510, 535);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 106);
             this.button2.TabIndex = 45;
@@ -620,12 +620,13 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(510, 535);
+            this.button3.Location = new System.Drawing.Point(281, 676);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(186, 106);
             this.button3.TabIndex = 46;
-            this.button3.Text = "轨道发码重置";
+            this.button3.Text = "关闭接车";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox1
             // 
