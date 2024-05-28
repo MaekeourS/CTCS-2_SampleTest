@@ -79,12 +79,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.ZXF = new System.Windows.Forms.Button();
+            this.CXF = new System.Windows.Forms.Button();
+            this.ZXJ = new System.Windows.Forms.Button();
+            this.CXJ = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Light1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light3)).BeginInit();
@@ -597,7 +597,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(374, 535);
+            this.button1.Location = new System.Drawing.Point(277, 535);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 107);
             this.button1.TabIndex = 44;
@@ -609,7 +609,7 @@
             // 
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(374, 675);
+            this.button2.Location = new System.Drawing.Point(277, 674);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 106);
             this.button2.TabIndex = 45;
@@ -620,72 +620,19 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(607, 535);
+            this.button3.Location = new System.Drawing.Point(510, 535);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(186, 106);
             this.button3.TabIndex = 46;
             this.button3.Text = "轨道发码重置";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton1.Location = new System.Drawing.Point(35, 535);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(308, 45);
-            this.radioButton1.TabIndex = 47;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "正线发车 正线接车";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton2.Location = new System.Drawing.Point(35, 596);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(308, 45);
-            this.radioButton2.TabIndex = 48;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "侧线发车 正线接车";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton3.Location = new System.Drawing.Point(35, 675);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(308, 45);
-            this.radioButton3.TabIndex = 49;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "正线发车 侧线接车";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.Click += new System.EventHandler(this.radioButton3_Click);
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton4.Location = new System.Drawing.Point(35, 736);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(308, 45);
-            this.radioButton4.TabIndex = 50;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "侧线发车 侧线接车";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.Click += new System.EventHandler(this.radioButton4_Click);
             // 
             // listBox1
             // 
             this.listBox1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 27;
-            this.listBox1.Location = new System.Drawing.Point(844, 535);
+            this.listBox1.Location = new System.Drawing.Point(740, 535);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox1.Size = new System.Drawing.Size(429, 247);
@@ -694,13 +641,57 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(607, 675);
+            this.button4.Location = new System.Drawing.Point(510, 675);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(186, 107);
             this.button4.TabIndex = 52;
             this.button4.Text = "清除失效事件";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // ZXF
+            // 
+            this.ZXF.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ZXF.Location = new System.Drawing.Point(62, 535);
+            this.ZXF.Name = "ZXF";
+            this.ZXF.Size = new System.Drawing.Size(76, 107);
+            this.ZXF.TabIndex = 53;
+            this.ZXF.Text = "正线发车";
+            this.ZXF.UseVisualStyleBackColor = true;
+            this.ZXF.Click += new System.EventHandler(this.ZXF_Click);
+            // 
+            // CXF
+            // 
+            this.CXF.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CXF.Location = new System.Drawing.Point(172, 536);
+            this.CXF.Name = "CXF";
+            this.CXF.Size = new System.Drawing.Size(76, 107);
+            this.CXF.TabIndex = 54;
+            this.CXF.Text = "侧线发车";
+            this.CXF.UseVisualStyleBackColor = true;
+            this.CXF.Click += new System.EventHandler(this.CXF_Click);
+            // 
+            // ZXJ
+            // 
+            this.ZXJ.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ZXJ.Location = new System.Drawing.Point(62, 675);
+            this.ZXJ.Name = "ZXJ";
+            this.ZXJ.Size = new System.Drawing.Size(76, 107);
+            this.ZXJ.TabIndex = 55;
+            this.ZXJ.Text = "正线接车";
+            this.ZXJ.UseVisualStyleBackColor = true;
+            this.ZXJ.Click += new System.EventHandler(this.ZXJ_Click);
+            // 
+            // CXJ
+            // 
+            this.CXJ.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CXJ.Location = new System.Drawing.Point(172, 675);
+            this.CXJ.Name = "CXJ";
+            this.CXJ.Size = new System.Drawing.Size(76, 107);
+            this.CXJ.TabIndex = 56;
+            this.CXJ.Text = "侧线接车";
+            this.CXJ.UseVisualStyleBackColor = true;
+            this.CXJ.Click += new System.EventHandler(this.CXJ_Click);
             // 
             // Form1
             // 
@@ -710,12 +701,12 @@
             this.BackgroundImage = global::CTCS_test.Properties.Resources.BACK2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1894, 1012);
+            this.Controls.Add(this.CXJ);
+            this.Controls.Add(this.ZXJ);
+            this.Controls.Add(this.CXF);
+            this.Controls.Add(this.ZXF);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -872,12 +863,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ZXF;
+        private System.Windows.Forms.Button CXF;
+        private System.Windows.Forms.Button ZXJ;
+        private System.Windows.Forms.Button CXJ;
     }
 }
 

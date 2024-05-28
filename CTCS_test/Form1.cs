@@ -8,6 +8,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace CTCS_test
 {
@@ -18,7 +19,7 @@ namespace CTCS_test
             InitializeComponent();
         }
         enum Codes { HU, HB, UU, UUS, U, U2, U2S, LU, L, L2, L3, L4, L5 }
-        enum Types { ZXZX, ZXCX, CXZX, CXCX }
+        enum Types { ZX, CX, YDZX, YDCX }
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
@@ -27,6 +28,7 @@ namespace CTCS_test
         int Xp = 200;
         int Yp = 343;
         bool side1 = false, side2 = false;
+        int Location = 3;
         Codes[] ZXFM = { Codes.HU, Codes.U, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5, Codes.L5 };
         Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
         private void timer1_Tick(object sender, EventArgs e)
@@ -43,12 +45,12 @@ namespace CTCS_test
                     j = 0;
                     Temp = i;
                 }
-           
-                if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX || Occupy[Temp] == -1) 
+                if (i == 18 && ZXJ.Enabled && CXJ.Enabled) j = 0;
+                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || Location > i) 
                     CodeNum[i] = ZXFM[j];
                 else CodeNum[i] = CXFM[j]; 
             }
-            if (Type[2] == Types.CXZX || Type[2] == Types.CXCX)
+            if (Type[2] == Types.CX)
             {
                 for (int i = 2;i>= 0; i--)
                 {
@@ -150,6 +152,7 @@ namespace CTCS_test
             {
                 if (Occupy[i] == 1)
                 {
+                    Location = i;
                     if (CodeNum[i + 1] == Codes.LU)
                     {
                         Brake = 1;
@@ -180,8 +183,8 @@ namespace CTCS_test
             }
             
             if((CodeNum[i + 1] >= Codes.L || (Xp<299 && CodeNum[i + 1] == Codes.UU)) && V<250) V +=1;
-            if (Type[i] == Types.ZXZX || Type[i] == Types.ZXCX) side1 = false; else side1 = true;
-            if (Type[i] == Types.ZXZX || Type[i] == Types.CXZX) side2 = false; else side2 = true;
+            if (Type[3] == Types.ZX) side1 = false; else side1 = true;
+            if (Type[19] == Types.ZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
             if (V <= 0)
             {
@@ -195,8 +198,7 @@ namespace CTCS_test
         private void Form1_Load(object sender, EventArgs e)
         {
             label1.Text = "Speed:" + V.ToString() + "km/h";
-            button3.PerformClick();
-            //CodeNum[5] = Codes.LU;
+            CodeNum[19] = Codes.HU;
 
         }
 
@@ -214,34 +216,26 @@ namespace CTCS_test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton4.Checked)
+            if (!ZXF.Enabled || !CXF.Enabled)
             {
-                MessageBox.Show("未选择接发车模式", "错误！");
-            }
-            else
-            {
-                if(button1.Text == "发车")
+                if (button1.Text == "发车")
                 {
                     button2.Enabled = true;
                     button1.Text = "重新发车";
                 }
-                button3.PerformClick();
                 button4.PerformClick();
-                for (int i = 22; i >= 0; i--)
-                {
-                    if (radioButton1.Checked) Type[i] = Types.ZXZX;
-                    else if (radioButton2.Checked) Type[i] = Types.CXZX;
-                    else if (radioButton3.Checked) Type[i] = Types.ZXCX;
-                    else Type[i] = Types.CXCX;
-                }
                 V = 0;
                 Xp = 200;
-                if (Type[2] == Types.ZXZX || Type[2] == Types.ZXCX) Yp = 343;
+                if (Type[3] == Types.ZX) Yp = 343;
                 else Yp = 262;
                 Train1.Location = new Point(Xp, Yp);
                 timer1.Enabled = true;
                 timer2.Enabled = true;
                 button2.Text = "暂停";
+            }
+            else
+            {
+                MessageBox.Show("未选择接发车模式", "错误！");
             }
 
         }
@@ -263,7 +257,7 @@ namespace CTCS_test
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 0; i--) Type[i] = Types.ZXZX;
+            for (int i = 3; i >= 0; i--) Type[i] = Types.ZX;
             CodeNum[22] = Codes.HU;
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
@@ -272,7 +266,7 @@ namespace CTCS_test
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 0; i--) Type[i] = Types.CXZX;
+            for (int i = 3; i >= 0; i--) Type[i] = Types.CX;
             CodeNum[22] = Codes.HU;
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
@@ -284,7 +278,7 @@ namespace CTCS_test
 
         private void radioButton3_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 0; i--) Type[i] = Types.ZXCX;
+            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
             CodeNum[22] = Codes.HU;
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
@@ -293,7 +287,7 @@ namespace CTCS_test
 
         private void radioButton4_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 0; i--) Type[i] = Types.CXCX;
+            for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
             CodeNum[22] = Codes.HU;
             CodeNum[21] = Codes.HU;
             CodeNum[20] = Codes.HU;
@@ -554,12 +548,55 @@ namespace CTCS_test
             listBox1.TopIndex = listBox1.Items.Count - 1;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ZXF_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked) radioButton1.PerformClick();
-            if (radioButton2.Checked) radioButton2.PerformClick();
-            if (radioButton3.Checked) radioButton3.PerformClick();
-            if (radioButton4.Checked) radioButton4.PerformClick();
+            for (int i = 3; i >= 0; i--) Type[i] = Types.ZX;
+            CodeNum[22] = Codes.HU;
+            CodeNum[21] = Codes.HU;
+            CodeNum[20] = Codes.HU;
+            CodeNum[19] = Codes.HU;
+            CXF.Enabled = true;
+            ZXF.Enabled = false;
         }
+
+        private void CXF_Click(object sender, EventArgs e)
+        {
+            for (int i = 3; i >= 0; i--) Type[i] = Types.CX;
+            CodeNum[22] = Codes.HU;
+            CodeNum[21] = Codes.HU;
+            CodeNum[20] = Codes.HU;
+            CodeNum[19] = Codes.HU;
+            CodeNum[2] = Codes.UU;
+            CodeNum[1] = Codes.UU;
+            CodeNum[0] = Codes.UU;
+            ZXF.Enabled = true;
+            CXF.Enabled = false;
+        }
+
+        private void ZXJ_Click(object sender, EventArgs e)
+        {
+            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
+            CodeNum[22] = Codes.HU;
+            CodeNum[21] = Codes.HU;
+            CodeNum[20] = Codes.HU;
+            CodeNum[19] = Codes.HU;
+            CXJ.Enabled = true;
+            ZXJ.Enabled = false;
+        }
+
+        private void CXJ_Click(object sender, EventArgs e)
+        {
+            for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
+            CodeNum[22] = Codes.HU;
+            CodeNum[21] = Codes.HU;
+            CodeNum[20] = Codes.HU;
+            CodeNum[19] = Codes.HU;
+            CodeNum[2] = Codes.UU;
+            CodeNum[1] = Codes.UU;
+            CodeNum[0] = Codes.UU;
+            ZXJ.Enabled = true;
+            CXJ.Enabled = false;
+        }
+
     }
 }
