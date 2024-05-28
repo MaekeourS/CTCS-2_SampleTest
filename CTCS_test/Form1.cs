@@ -377,6 +377,7 @@ namespace CTCS_test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
             ZXJ.Enabled = true;
             CXJ.Enabled = true;
         }
