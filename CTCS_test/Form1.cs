@@ -46,14 +46,14 @@ namespace CTCS_test
                     j = 0;
                     Temp = i;
                 }
-                if (i == 18 && ZXJ.Enabled && CXJ.Enabled) j = 0;
-                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i) 
+                if (i == 18 && (ZXJ.Enabled && CXJ.Enabled || Xp >= 1487)) j = 0;
+                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i)
                     CodeNum[i] = ZXFM[j];
-                else CodeNum[i] = CXFM[j]; 
+                else CodeNum[i] = CXFM[j];
             }
             if (Type[2] == Types.CX)
             {
-                for (int i = 2;i>= 0; i--)
+                for (int i = 2; i >= 0; i--)
                 {
                     CodeNum[i] = Codes.UU;
                 }
@@ -68,7 +68,7 @@ namespace CTCS_test
                 LightSwitch(i, LightCodes[i - 1]);
             }
             listBox1.TopIndex = listBox1.Items.Count - 1;
-            label1.Text = "Speed:"+V.ToString()+"km/h";
+            label1.Text = "Speed:" + V.ToString() + "km/h";
         }
 
 
@@ -124,7 +124,7 @@ namespace CTCS_test
         {
             double Brake = 0;
             int i;
-            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else if(Occupy[0] == 1) Occupy[0] = 0;
+            if (Xp > 47 && Xp < 177) { CodeNum[0] = Codes.HU; Occupy[0] = 1; } else if (Occupy[0] == 1) Occupy[0] = 0;
             if (Xp > 127 && Xp < 257) { CodeNum[1] = Codes.HU; Occupy[1] = 1; } else if (Occupy[1] == 1) Occupy[1] = 0;
             if (Xp > 207 && Xp < 337) { CodeNum[2] = Codes.HU; Occupy[2] = 1; } else if (Occupy[2] == 1) Occupy[2] = 0;
             if (Xp > 287 && Xp < 417) { CodeNum[3] = Codes.HU; Occupy[3] = 1; } else if (Occupy[3] == 1) Occupy[3] = 0;
@@ -144,7 +144,12 @@ namespace CTCS_test
             if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else if (Occupy[17] == 1) Occupy[17] = 0;
             if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else if (Occupy[18] == 1) Occupy[18] = 0;
             if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else if (Occupy[19] == 1) Occupy[19] = 0;
-
+            if (Xp > 1487)
+            {
+                ZXJ.Enabled = false;
+                CXJ.Enabled = false;
+                button3.Enabled = false;
+            }
             for (i = 22; i > 0; i--)
             {
                 if (Occupy[i] == 1)
@@ -156,7 +161,7 @@ namespace CTCS_test
                         V -= Brake;
                         if (V < 20) V = 20;
                     }
-                    if ((CodeNum[i + 1] == Codes.U )||( CodeNum[i + 1] == Codes.U2 )||( CodeNum[i + 1] == Codes.UU && Xp>299))
+                    if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
                     {
                         Brake = 1;
                         V -= Brake;
@@ -168,18 +173,18 @@ namespace CTCS_test
                         Brake = 1;
                         V -= Brake;
                         if (V > 135) V = 135;
-                        if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU) && Xp <= 1645 && V<=20)
+                        if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU || Occupy[i - 1] == 1) && Xp <= 1645 && V <= 20)
                         {
                             Brake = 0;
                             V = 20;
                         }
-                        
+
                     }
                     break;
                 }
             }
-            
-            if((CodeNum[i + 1] >= Codes.L || (Xp<299 && CodeNum[i + 1] == Codes.UU)) && V<250) V +=1;
+
+            if ((CodeNum[i + 1] >= Codes.L || (Xp < 299 && CodeNum[i + 1] == Codes.UU)) && V < 250) V += 1;
             if (Type[3] == Types.ZX) side1 = false; else side1 = true;
             if (Type[19] == Types.ZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
@@ -201,13 +206,13 @@ namespace CTCS_test
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Interval = (int)(24500/(V+1));
-            if (timer2.Interval>1000)timer2.Interval = 1000;
+            timer2.Interval = (int)(24500 / (V + 1));
+            if (timer2.Interval > 1000) timer2.Interval = 1000;
             Xp++;
             if (Xp >= 250 && Xp <= 295 && side1) Yp += 2;
             if (Xp >= 1540 && Xp <= 1585 && side2) Yp -= 2;
-            if (Yp>343)Yp = 343;
-            if (Yp<262) Yp = 262;
+            if (Yp > 343) Yp = 343;
+            if (Yp < 262) Yp = 262;
             Train1.Location = new Point(Xp, Yp);
         }
 
@@ -227,10 +232,16 @@ namespace CTCS_test
                 if (Type[3] == Types.ZX) Yp = 343;
                 else Yp = 262;
                 Train1.Location = new Point(Xp, Yp);
+                button2.Text = "暂停";
                 timer1.Enabled = true;
                 timer2.Enabled = true;
                 button2.Enabled = true;
-                button2.Text = "暂停";
+                button3.Enabled = true;
+                if (!ZXJ.Enabled && !CXJ.Enabled)
+                {
+                    ZXJ.Enabled = true;
+                    CXJ.Enabled = true;
+                }
             }
             else
             {
@@ -253,7 +264,7 @@ namespace CTCS_test
             }
             else
             {
-                if(side1) ZXF.Enabled = true;
+                if (side1) ZXF.Enabled = true;
                 else CXF.Enabled = true;
                 button2.Text = "继续";
                 label1.Text = "暂停中";
@@ -330,13 +341,13 @@ namespace CTCS_test
             {
                 CodeNum[i] = Codes.L;
                 Occupy[i] = 0;
-                listBox1.Items.Add("轨道区段"+(i + 1).ToString()+"故障占用解除");
+                listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用解除");
             }
             else
             {
                 CodeNum[i] = Codes.HU;
                 Occupy[i] = -1;
-                listBox1.Items.Add("轨道区段"+(i + 1).ToString()+"故障占用");
+                listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
             }
         }
 

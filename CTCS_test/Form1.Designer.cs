@@ -700,9 +700,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::CTCS_test.Properties.Resources.BACK2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(3, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1890, 1015);
+            this.pictureBox1.Size = new System.Drawing.Size(1891, 1015);
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
