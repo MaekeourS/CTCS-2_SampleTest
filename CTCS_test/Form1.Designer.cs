@@ -76,16 +76,18 @@
             this.Train1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Depart = new System.Windows.Forms.Button();
+            this.Suspend = new System.Windows.Forms.Button();
+            this.NotJC = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Sweep = new System.Windows.Forms.Button();
             this.ZXF = new System.Windows.Forms.Button();
             this.CXF = new System.Windows.Forms.Button();
             this.ZXJ = new System.Windows.Forms.Button();
             this.CXJ = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Pass = new System.Windows.Forms.Button();
+            this.Stop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Light1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Light3)).BeginInit();
@@ -596,61 +598,62 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // button1
+            // Depart
             // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(281, 535);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 107);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "发车";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Depart.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Depart.Location = new System.Drawing.Point(281, 535);
+            this.Depart.Name = "Depart";
+            this.Depart.Size = new System.Drawing.Size(186, 107);
+            this.Depart.TabIndex = 44;
+            this.Depart.Text = "发车";
+            this.Depart.UseVisualStyleBackColor = true;
+            this.Depart.Click += new System.EventHandler(this.Depart_Click);
             // 
-            // button2
+            // Suspend
             // 
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(510, 535);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 106);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "暂停";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Suspend.Enabled = false;
+            this.Suspend.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Suspend.Location = new System.Drawing.Point(510, 535);
+            this.Suspend.Name = "Suspend";
+            this.Suspend.Size = new System.Drawing.Size(186, 107);
+            this.Suspend.TabIndex = 45;
+            this.Suspend.Text = "暂停";
+            this.Suspend.UseVisualStyleBackColor = true;
+            this.Suspend.Click += new System.EventHandler(this.Suspend_Click);
             // 
-            // button3
+            // NotJC
             // 
-            this.button3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(281, 676);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(186, 106);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "关闭接车";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.NotJC.Enabled = false;
+            this.NotJC.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NotJC.Location = new System.Drawing.Point(510, 676);
+            this.NotJC.Name = "NotJC";
+            this.NotJC.Size = new System.Drawing.Size(76, 107);
+            this.NotJC.TabIndex = 46;
+            this.NotJC.Text = "关闭接车";
+            this.NotJC.UseVisualStyleBackColor = true;
+            this.NotJC.Click += new System.EventHandler(this.NotJC_Click);
             // 
             // listBox1
             // 
             this.listBox1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 27;
-            this.listBox1.Location = new System.Drawing.Point(740, 535);
+            this.listBox1.Location = new System.Drawing.Point(740, 536);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox1.Size = new System.Drawing.Size(429, 247);
+            this.listBox1.Size = new System.Drawing.Size(415, 247);
             this.listBox1.TabIndex = 51;
             // 
-            // button4
+            // Sweep
             // 
-            this.button4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(510, 675);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 107);
-            this.button4.TabIndex = 52;
-            this.button4.Text = "清除失效事件";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Sweep.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Sweep.Location = new System.Drawing.Point(620, 676);
+            this.Sweep.Name = "Sweep";
+            this.Sweep.Size = new System.Drawing.Size(76, 107);
+            this.Sweep.TabIndex = 52;
+            this.Sweep.Text = "清除失效事件";
+            this.Sweep.UseVisualStyleBackColor = true;
+            this.Sweep.Click += new System.EventHandler(this.Sweep_Click);
             // 
             // ZXF
             // 
@@ -677,7 +680,7 @@
             // ZXJ
             // 
             this.ZXJ.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ZXJ.Location = new System.Drawing.Point(62, 675);
+            this.ZXJ.Location = new System.Drawing.Point(281, 676);
             this.ZXJ.Name = "ZXJ";
             this.ZXJ.Size = new System.Drawing.Size(76, 107);
             this.ZXJ.TabIndex = 55;
@@ -688,7 +691,7 @@
             // CXJ
             // 
             this.CXJ.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CXJ.Location = new System.Drawing.Point(172, 675);
+            this.CXJ.Location = new System.Drawing.Point(391, 676);
             this.CXJ.Name = "CXJ";
             this.CXJ.Size = new System.Drawing.Size(76, 107);
             this.CXJ.TabIndex = 56;
@@ -702,9 +705,32 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(3, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1891, 1015);
+            this.pictureBox1.Size = new System.Drawing.Size(1890, 1015);
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
+            // 
+            // Pass
+            // 
+            this.Pass.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Pass.Location = new System.Drawing.Point(172, 676);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(76, 107);
+            this.Pass.TabIndex = 58;
+            this.Pass.Text = "通过";
+            this.Pass.UseVisualStyleBackColor = true;
+            this.Pass.Click += new System.EventHandler(this.Pass_Click);
+            // 
+            // Stop
+            // 
+            this.Stop.Enabled = false;
+            this.Stop.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Stop.Location = new System.Drawing.Point(62, 676);
+            this.Stop.Name = "Stop";
+            this.Stop.Size = new System.Drawing.Size(76, 107);
+            this.Stop.TabIndex = 59;
+            this.Stop.Text = "停车";
+            this.Stop.UseVisualStyleBackColor = true;
+            this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // Form1
             // 
@@ -712,15 +738,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1894, 1012);
+            this.Controls.Add(this.Stop);
+            this.Controls.Add(this.Pass);
             this.Controls.Add(this.CXJ);
             this.Controls.Add(this.ZXJ);
             this.Controls.Add(this.CXF);
             this.Controls.Add(this.ZXF);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Sweep);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NotJC);
+            this.Controls.Add(this.Suspend);
+            this.Controls.Add(this.Depart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Train1);
             this.Controls.Add(this.Light19);
@@ -873,16 +901,18 @@
         private System.Windows.Forms.PictureBox Train1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Depart;
+        private System.Windows.Forms.Button Suspend;
+        private System.Windows.Forms.Button NotJC;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Sweep;
         private System.Windows.Forms.Button ZXF;
         private System.Windows.Forms.Button CXF;
         private System.Windows.Forms.Button ZXJ;
         private System.Windows.Forms.Button CXJ;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Pass;
+        private System.Windows.Forms.Button Stop;
     }
 }
 

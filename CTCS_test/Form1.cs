@@ -148,7 +148,7 @@ namespace CTCS_test
             {
                 ZXJ.Enabled = false;
                 CXJ.Enabled = false;
-                button3.Enabled = false;
+                NotJC.Enabled = false;
             }
             for (i = 22; i > 0; i--)
             {
@@ -216,71 +216,6 @@ namespace CTCS_test
             Train1.Location = new Point(Xp, Yp);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!ZXF.Enabled || !CXF.Enabled)
-            {
-                ZXF.Enabled = false;
-                CXF.Enabled = false;
-                if (button1.Text == "发车")
-                {
-                    button1.Text = "重新发车";
-                }
-                button4.PerformClick();
-                V = 0;
-                Xp = 200;
-                if (Type[3] == Types.ZX) Yp = 343;
-                else Yp = 262;
-                Train1.Location = new Point(Xp, Yp);
-                button2.Text = "暂停";
-                timer1.Enabled = true;
-                timer2.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
-                if (!ZXJ.Enabled && !CXJ.Enabled)
-                {
-                    ZXJ.Enabled = true;
-                    CXJ.Enabled = true;
-                }
-            }
-            else
-            {
-                SystemSounds.Exclamation.Play();
-                MessageBox.Show("未选择发车股道", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            timer1.Enabled = !timer1.Enabled;
-            if (V > 0.1) timer2.Enabled = !timer2.Enabled;
-            if (timer1.Enabled)
-            {
-                ZXF.Enabled = false;
-                CXF.Enabled = false;
-                button2.Text = "暂停";
-            }
-            else
-            {
-                if (side1) ZXF.Enabled = true;
-                else CXF.Enabled = true;
-                button2.Text = "继续";
-                label1.Text = "暂停中";
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            for (int i = 22; i >= 0; i--)
-            {
-                if (Occupy[i] == -1) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
-            }
-            listBox1.TopIndex = listBox1.Items.Count - 1;
-        }
-
         private void ZXF_Click(object sender, EventArgs e)
         {
             for (int i = 3; i >= 0; i--) Type[i] = Types.ZX;
@@ -290,7 +225,7 @@ namespace CTCS_test
             CodeNum[19] = Codes.HU;
             CXF.Enabled = true;
             ZXF.Enabled = false;
-            button2.Enabled = false;
+            Suspend.Enabled = false;
         }
 
         private void CXF_Click(object sender, EventArgs e)
@@ -305,32 +240,23 @@ namespace CTCS_test
             CodeNum[0] = Codes.UU;
             ZXF.Enabled = true;
             CXF.Enabled = false;
-            button2.Enabled = false;
+            Suspend.Enabled = false;
         }
 
         private void ZXJ_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
             CXJ.Enabled = true;
             ZXJ.Enabled = false;
+            NotJC.Enabled = true;
+            JC();
         }
 
         private void CXJ_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
-            CodeNum[20] = Codes.HU;
-            CodeNum[19] = Codes.HU;
-            CodeNum[2] = Codes.UU;
-            CodeNum[1] = Codes.UU;
-            CodeNum[0] = Codes.UU;
             ZXJ.Enabled = true;
             CXJ.Enabled = false;
+            NotJC.Enabled = true;
+            JC();
         }
 
         private void Code_Click(object sender, EventArgs e)
@@ -351,11 +277,132 @@ namespace CTCS_test
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Pass_Click(object sender, EventArgs e)
         {
-            for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
+            Pass.Enabled = false;
+            Stop.Enabled = true;
+            JC();
+        }
+
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            Stop.Enabled = false;
+            Pass.Enabled = true;
+            JC();
+        }
+
+        private void NotJC_Click(object sender, EventArgs e)
+        {
+            NotJC.Enabled = false;
             ZXJ.Enabled = true;
             CXJ.Enabled = true;
+            Stop.Enabled = false;
+            Pass.Enabled = true;
+            JC();
+        }
+
+        private void Depart_Click(object sender, EventArgs e)
+        {
+            if (!ZXF.Enabled || !CXF.Enabled)
+            {
+                ZXF.Enabled = false;
+                CXF.Enabled = false;
+                if (Depart.Text == "发车")
+                {
+                    Depart.Text = "重新发车";
+                }
+                Sweep.PerformClick();
+                V = 0;
+                Xp = 200;
+                if (Type[3] == Types.ZX) Yp = 343;
+                else Yp = 262;
+                Train1.Location = new Point(Xp, Yp);
+                Suspend.Text = "暂停";
+                timer1.Enabled = true;
+                timer2.Enabled = true;
+                Suspend.Enabled = true;
+            }
+            else
+            {
+                SystemSounds.Exclamation.Play();
+                MessageBox.Show("未选择发车股道", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Suspend_Click(object sender, EventArgs e)
+        {
+
+            timer1.Enabled = !timer1.Enabled;
+            if (V > 0.1) timer2.Enabled = !timer2.Enabled;
+            if (timer1.Enabled)
+            {
+                ZXF.Enabled = false;
+                CXF.Enabled = false;
+                Suspend.Text = "暂停";
+            }
+            else
+            {
+                if (side1) ZXF.Enabled = true;
+                else CXF.Enabled = true;
+                Suspend.Text = "继续";
+                label1.Text = "暂停中";
+            }
+        }
+
+        private void Sweep_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            for (int i = 22; i >= 0; i--)
+            {
+                if (Occupy[i] == -1) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
+            }
+            listBox1.TopIndex = listBox1.Items.Count - 1;
+        }
+
+        private void JC()
+        {
+            if (!CXJ.Enabled)
+            {
+                for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
+                if (!Stop.Enabled)
+                {
+                    CodeNum[22] = Codes.HU;
+                    CodeNum[21] = Codes.HU;
+                    CodeNum[20] = Codes.HU;
+                    CodeNum[19] = Codes.HU;
+                    CodeNum[2] = Codes.UU;
+                    CodeNum[1] = Codes.UU;
+                    CodeNum[0] = Codes.UU;
+                }
+                else if (!Pass.Enabled)
+                {
+                    CodeNum[22] = Codes.UU;
+                    CodeNum[21] = Codes.UU;
+                    CodeNum[20] = Codes.UU;
+                    CodeNum[19] = Codes.UU;
+                    CodeNum[2] = Codes.UU;
+                    CodeNum[1] = Codes.UU;
+                    CodeNum[0] = Codes.UU;
+                }
+            }
+            else
+            {
+                for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
+                if (!Stop.Enabled)
+                {
+                    CodeNum[22] = Codes.HU;
+                    CodeNum[21] = Codes.HU;
+                    CodeNum[20] = Codes.HU;
+                    CodeNum[19] = Codes.HU;
+                }
+                else if (!Pass.Enabled)
+                {
+                    CodeNum[22] = Codes.U;
+                    CodeNum[21] = Codes.U;
+                    CodeNum[20] = Codes.U;
+                    CodeNum[19] = Codes.U;
+                }
+            }
         }
     }
 }
