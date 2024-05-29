@@ -40,6 +40,7 @@ namespace CTCS_test
                 if (Occupy[i] == 0)
                 {
                     if (j < 8) j++;
+                    if (i == 3) j--;
                 }
                 else
                 {
