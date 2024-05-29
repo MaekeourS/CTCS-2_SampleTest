@@ -144,6 +144,8 @@ namespace CTCS_test
             if (Xp > 1407 && Xp < 1537) { CodeNum[17] = Codes.HU; Occupy[17] = 1; } else if (Occupy[17] == 1) Occupy[17] = 0;
             if (Xp > 1487 && Xp < 1617) { CodeNum[18] = Codes.HU; Occupy[18] = 1; } else if (Occupy[18] == 1) Occupy[18] = 0;
             if (Xp > 1567 && Xp < 1697) { CodeNum[19] = Codes.HU; Occupy[19] = 1; } else if (Occupy[19] == 1) Occupy[19] = 0;
+            if (Xp > 1647 && Xp < 1777) { CodeNum[20] = Codes.HU; Occupy[20] = 1; } else if (Occupy[20] == 1) Occupy[20] = 0;
+            if (Xp > 1727 && Xp < 1857) { CodeNum[20] = Codes.HU; Occupy[20] = 1; } else if (Occupy[20] == 1) Occupy[20] = 0;
             if (Xp > 1487)
             {
                 ZXJ.Enabled = false;
@@ -159,14 +161,14 @@ namespace CTCS_test
                     {
                         Brake = 1;
                         V -= Brake;
-                        if (V < 20) V = 20;
+                        if (V < 160) V = 160;
                     }
                     if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
                     {
                         Brake = 1;
                         V -= Brake;
                         if (V > 200) V = 200;
-                        if (V < 20) V = 20;
+                        if (V < 100) V = 100;
                     }
                     if (CodeNum[i + 1] == Codes.HU)
                     {
@@ -183,7 +185,10 @@ namespace CTCS_test
                     break;
                 }
             }
-
+            if (Xp >= 1768)
+            {
+                Application.Restart();
+            }
             if ((CodeNum[i + 1] >= Codes.L || (Xp < 299 && CodeNum[i + 1] == Codes.UU)) && V < 250) V += 1;
             if (Type[3] == Types.ZX) side1 = false; else side1 = true;
             if (Type[19] == Types.ZX) side2 = false; else side2 = true;
