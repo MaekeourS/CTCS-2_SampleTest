@@ -24,7 +24,7 @@ namespace CTCS_test
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
         int[] Occupy = new int[23];
-        int[] LightCodes = { 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 21 };
+        int[] LightCodes = { 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 20 };
         double V = 0;
         int Xp = 200;
         int Yp = 343;
@@ -160,28 +160,35 @@ namespace CTCS_test
                     TrainLocation = i;
                     if (CodeNum[i + 1] == Codes.LU)
                     {
-                        Brake = 1;
-                        V -= Brake;
-                        if (V < 160) V = 160;
+                        if (V > 160)
+                        {
+                            Brake = 1;
+                            V -= Brake;
+                        }
                     }
-                    if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
+                    else if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
                     {
-                        Brake = 1;
-                        V -= Brake;
+                        if( V > 100)
+                        {
+                            Brake = 1;
+                            V -= Brake;
+                        }
                         if (V > 200) V = 200;
-                        if (V < 100) V = 100;
                     }
-                    if (CodeNum[i + 1] == Codes.HU)
+                    else if (CodeNum[i + 1] == Codes.HU)
                     {
                         Brake = 1;
                         V -= Brake;
                         if (V > 135) V = 135;
-                        if ((Xp >= 1487 || CodeNum[i + 1] != Codes.HU || Occupy[i - 1] == 1) && Xp <= 1645 && V <= 20)
+                        if ((Xp >= 1487 && Xp <= 1645 || Occupy[i - 1] == 1) && V <= 20)
                         {
                             Brake = 0;
                             V = 20;
                         }
-
+                        if (Xp >= 1617 && CodeNum[22] != Codes.HU)
+                        {
+                            V += 1;
+                        }
                     }
                     break;
                 }
@@ -254,6 +261,7 @@ namespace CTCS_test
             CXJ.Enabled = true;
             ZXJ.Enabled = false;
             NotJC.Enabled = true;
+            side2 = false;
             JC();
         }
 
@@ -262,6 +270,7 @@ namespace CTCS_test
             ZXJ.Enabled = true;
             CXJ.Enabled = false;
             NotJC.Enabled = true;
+            side2 = true;
             JC();
         }
 
@@ -304,6 +313,7 @@ namespace CTCS_test
             CXJ.Enabled = true;
             Stop.Enabled = false;
             Pass.Enabled = true;
+            side2 = false;
             JC();
         }
 
@@ -318,8 +328,8 @@ namespace CTCS_test
                     Depart.Text = "重新发车";
                 }
                 Sweep.PerformClick();
-                V = 0;
-                Xp = 200;
+                V = 20;
+                Xp = 1600;
                 if (Type[3] == Types.ZX) Yp = 343;
                 else Yp = 262;
                 Train1.Location = new Point(Xp, Yp);
@@ -367,7 +377,7 @@ namespace CTCS_test
 
         private void JC()
         {
-            if (!CXJ.Enabled)
+            if (side2)
             {
                 for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
                 if (!Stop.Enabled)
