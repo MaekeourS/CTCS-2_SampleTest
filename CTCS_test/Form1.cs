@@ -39,8 +39,8 @@ namespace CTCS_test
             {
                 if (Occupy[i] == 0)
                 {
-                    if (j < 8) j++;
-                    if (i == 3) j--;
+                    if (j < 8 && i != 3) j++;
+                    //if (i == 3) j--;
                 }
                 else
                 {
@@ -328,8 +328,8 @@ namespace CTCS_test
                     Depart.Text = "重新发车";
                 }
                 Sweep.PerformClick();
-                V = 20;
-                Xp = 1600;
+                V = 0;
+                Xp = 200;
                 if (Type[3] == Types.ZX) Yp = 343;
                 else Yp = 262;
                 Train1.Location = new Point(Xp, Yp);
