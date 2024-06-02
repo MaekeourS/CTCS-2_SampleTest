@@ -588,7 +588,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(630, 64);
+            this.label1.Location = new System.Drawing.Point(808, 536);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 62);
             this.label1.TabIndex = 43;
@@ -601,7 +601,7 @@
             // Depart
             // 
             this.Depart.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Depart.Location = new System.Drawing.Point(281, 535);
+            this.Depart.Location = new System.Drawing.Point(281, 536);
             this.Depart.Name = "Depart";
             this.Depart.Size = new System.Drawing.Size(186, 107);
             this.Depart.TabIndex = 44;
@@ -613,7 +613,7 @@
             // 
             this.Suspend.Enabled = false;
             this.Suspend.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Suspend.Location = new System.Drawing.Point(510, 535);
+            this.Suspend.Location = new System.Drawing.Point(510, 536);
             this.Suspend.Name = "Suspend";
             this.Suspend.Size = new System.Drawing.Size(186, 107);
             this.Suspend.TabIndex = 45;
@@ -638,7 +638,7 @@
             this.listBox1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 27;
-            this.listBox1.Location = new System.Drawing.Point(740, 536);
+            this.listBox1.Location = new System.Drawing.Point(1412, 536);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox1.Size = new System.Drawing.Size(415, 247);
