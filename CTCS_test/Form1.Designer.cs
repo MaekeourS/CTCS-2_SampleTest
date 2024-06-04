@@ -309,7 +309,7 @@
             // 
             // Light17
             // 
-            this.Light17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Light17.BackgroundImage")));
+            this.Light17.BackgroundImage = global::CTCS_test.Properties.Resources.H;
             this.Light17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Light17.Location = new System.Drawing.Point(1541, 372);
             this.Light17.Name = "Light17";
@@ -319,7 +319,7 @@
             // 
             // Light16
             // 
-            this.Light16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Light16.BackgroundImage")));
+            this.Light16.BackgroundImage = global::CTCS_test.Properties.Resources.U;
             this.Light16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Light16.Location = new System.Drawing.Point(1460, 372);
             this.Light16.Name = "Light16";
@@ -329,7 +329,7 @@
             // 
             // Light15
             // 
-            this.Light15.BackgroundImage = global::CTCS_test.Properties.Resources.L;
+            this.Light15.BackgroundImage = global::CTCS_test.Properties.Resources.LU;
             this.Light15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Light15.Location = new System.Drawing.Point(1380, 372);
             this.Light15.Name = "Light15";
@@ -359,6 +359,7 @@
             // 
             // Code23
             // 
+            this.Code23.BackgroundImage = global::CTCS_test.Properties.Resources.JCcode;
             this.Code23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code23.Location = new System.Drawing.Point(1786, 454);
@@ -369,6 +370,7 @@
             // 
             // Code22
             // 
+            this.Code22.BackgroundImage = global::CTCS_test.Properties.Resources.JCcode;
             this.Code22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code22.Location = new System.Drawing.Point(1707, 454);
@@ -379,6 +381,7 @@
             // 
             // Code21
             // 
+            this.Code21.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code21.Location = new System.Drawing.Point(1628, 454);
@@ -389,6 +392,7 @@
             // 
             // Code20
             // 
+            this.Code20.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code20.Location = new System.Drawing.Point(1546, 454);
@@ -399,6 +403,7 @@
             // 
             // Code19
             // 
+            this.Code19.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code19.Location = new System.Drawing.Point(1464, 454);
@@ -410,6 +415,7 @@
             // 
             // Code18
             // 
+            this.Code18.BackgroundImage = global::CTCS_test.Properties.Resources.Ucode;
             this.Code18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code18.Location = new System.Drawing.Point(1384, 454);
@@ -421,6 +427,7 @@
             // 
             // Code17
             // 
+            this.Code17.BackgroundImage = global::CTCS_test.Properties.Resources.LUcode;
             this.Code17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code17.Location = new System.Drawing.Point(1305, 454);
@@ -432,6 +439,7 @@
             // 
             // Code16
             // 
+            this.Code16.BackgroundImage = global::CTCS_test.Properties.Resources.Lcode;
             this.Code16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code16.Location = new System.Drawing.Point(1221, 454);
@@ -443,6 +451,7 @@
             // 
             // Code15
             // 
+            this.Code15.BackgroundImage = global::CTCS_test.Properties.Resources.L2code;
             this.Code15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code15.Location = new System.Drawing.Point(1142, 454);
@@ -454,6 +463,7 @@
             // 
             // Code14
             // 
+            this.Code14.BackgroundImage = global::CTCS_test.Properties.Resources.L3code;
             this.Code14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code14.Location = new System.Drawing.Point(1060, 454);
@@ -465,6 +475,7 @@
             // 
             // Code13
             // 
+            this.Code13.BackgroundImage = global::CTCS_test.Properties.Resources.L4code;
             this.Code13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code13.Location = new System.Drawing.Point(981, 454);
@@ -476,6 +487,7 @@
             // 
             // Code12
             // 
+            this.Code12.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code12.Location = new System.Drawing.Point(902, 454);
@@ -487,6 +499,7 @@
             // 
             // Code11
             // 
+            this.Code11.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code11.Location = new System.Drawing.Point(819, 454);
@@ -498,6 +511,7 @@
             // 
             // Code10
             // 
+            this.Code10.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code10.Location = new System.Drawing.Point(740, 454);
@@ -509,6 +523,7 @@
             // 
             // Code9
             // 
+            this.Code9.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code9.Location = new System.Drawing.Point(656, 454);
@@ -520,6 +535,7 @@
             // 
             // Code8
             // 
+            this.Code8.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code8.Location = new System.Drawing.Point(578, 454);
@@ -531,6 +547,7 @@
             // 
             // Code7
             // 
+            this.Code7.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code7.Location = new System.Drawing.Point(494, 454);
@@ -542,6 +559,7 @@
             // 
             // Code6
             // 
+            this.Code6.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code6.Location = new System.Drawing.Point(416, 454);
@@ -553,6 +571,7 @@
             // 
             // Code5
             // 
+            this.Code5.BackgroundImage = global::CTCS_test.Properties.Resources.L5code;
             this.Code5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code5.Location = new System.Drawing.Point(334, 454);
@@ -563,6 +582,7 @@
             // 
             // Code4
             // 
+            this.Code4.BackgroundImage = global::CTCS_test.Properties.Resources.JCcode;
             this.Code4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code4.Location = new System.Drawing.Point(254, 454);
@@ -573,6 +593,7 @@
             // 
             // Code3
             // 
+            this.Code3.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code3.Location = new System.Drawing.Point(172, 454);
@@ -583,6 +604,7 @@
             // 
             // Code2
             // 
+            this.Code2.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code2.Location = new System.Drawing.Point(88, 454);
@@ -593,6 +615,7 @@
             // 
             // Code1
             // 
+            this.Code1.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
             this.Code1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code1.Location = new System.Drawing.Point(12, 454);
@@ -703,7 +726,7 @@
             // 
             // Light2
             // 
-            this.Light2.BackgroundImage = global::CTCS_test.Properties.Resources.L;
+            this.Light2.BackgroundImage = global::CTCS_test.Properties.Resources.H;
             this.Light2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Light2.Location = new System.Drawing.Point(254, 194);
             this.Light2.Name = "Light2";
@@ -713,7 +736,7 @@
             // 
             // Light1
             // 
-            this.Light1.BackgroundImage = global::CTCS_test.Properties.Resources.L;
+            this.Light1.BackgroundImage = global::CTCS_test.Properties.Resources.H;
             this.Light1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Light1.Location = new System.Drawing.Point(254, 372);
             this.Light1.Name = "Light1";

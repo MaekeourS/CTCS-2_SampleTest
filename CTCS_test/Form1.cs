@@ -238,8 +238,8 @@ namespace CTCS_test
         private void ZXF_Click(object sender, EventArgs e)
         {
             for (int i = 3; i >= 0; i--) Type[i] = Types.ZX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
+            CodeNum[22] = Codes.JC;
+            CodeNum[21] = Codes.JC;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
             CXF.Enabled = true;
@@ -250,8 +250,8 @@ namespace CTCS_test
         private void CXF_Click(object sender, EventArgs e)
         {
             for (int i = 3; i >= 0; i--) Type[i] = Types.CX;
-            CodeNum[22] = Codes.HU;
-            CodeNum[21] = Codes.HU;
+            CodeNum[22] = Codes.JC;
+            CodeNum[21] = Codes.JC;
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
             CodeNum[2] = Codes.UU;
