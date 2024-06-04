@@ -29,6 +29,7 @@ namespace CTCS_test
         int Xp = 200;
         int Yp = 343;
         bool side1 = false, side2 = false;
+        bool StopMassage = false;
         int TrainLocation = 3;
         Codes[] ZXFM = { Codes.HU, Codes.U, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5, Codes.L5 };
         Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
@@ -184,17 +185,18 @@ namespace CTCS_test
                     }
                     else if (CodeNum[i + 1] == Codes.HU)
                     {
+                        if (Xp > 1640 && CodeNum[21] != Codes.JC)
+                        {
+                            V += 1;
+                            break;
+                        }
                         Brake = 1;
                         V -= Brake;
                         if (V > 135) V = 135;
-                        if ((Xp >= 1487 && Xp <= 1645 || Occupy[i - 1] == 1) && V <= 20)
+                        if ((Xp >= 1487 && Xp <= 1640 || Occupy[i - 1] == 1) && V <= 20)
                         {
                             Brake = 0;
                             V = 20;
-                        }
-                        if (Xp >= 1617 && CodeNum[22] != Codes.HU)
-                        {
-                            V += 1;
                         }
                     }
                     break;
@@ -204,7 +206,21 @@ namespace CTCS_test
             {
                 Application.Restart();
             }
-            if ((CodeNum[i + 1] >= Codes.L || (Xp < 299 && CodeNum[i + 1] == Codes.UU)) && V < 250) V += 1;
+            if ((CodeNum[i + 1] >= Codes.L || ((Xp < 299 || Xp > 1640 )&& CodeNum[i + 1] == Codes.UU)) && V < 250)
+            {
+                if (V == 0)
+                {
+                    if (Xp > 1640)
+                    {
+                        if(Yp == 343) listBox1.Items.Add("列车从乙站正线发车");
+                        else listBox1.Items.Add("列车从乙站侧线发车");
+                    }
+                    else listBox1.Items.Add("列车出发");
+                    StopMassage = false;
+                }
+                V += 1;
+            }
+                
             if (Type[3] == Types.ZX) side1 = false; else side1 = true;
             if (Type[19] == Types.ZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
@@ -212,6 +228,12 @@ namespace CTCS_test
             {
                 V = 0;
                 timer2.Enabled = false;
+                if (!StopMassage)
+                {
+                    if(Xp > 1640) listBox1.Items.Add("列车到达乙站");
+                    else listBox1.Items.Add("列车停车");
+                    StopMassage = true;
+                }
             }
             else timer2.Enabled = true;
             //if (CodeNum[i + 1] == Codes.HU && V < 20) V = 20;
@@ -286,14 +308,22 @@ namespace CTCS_test
             int i = int.Parse(PictureBox.Name.Substring(4)) - 1;
             if (Occupy[i] == -2)
             {
-                if (CodeNum[i - 1] != Codes.H)
+                if (Occupy[i + 1] != -2)
                 {
-                    CodeNum[i - 1] = Codes.L;
-                    Occupy[i - 1] = 0;
+                    if (CodeNum[i - 1] != Codes.H)
+                    {
+                        CodeNum[i - 1] = Codes.L;
+                        Occupy[i - 1] = 0;
+                    }
+                    CodeNum[i] = Codes.L;
+                    Occupy[i] = 0;
+                    listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用解除");
                 }
-                CodeNum[i] = Codes.L;
-                Occupy[i] = 0;
-                listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用解除");
+                else
+                {
+                    SystemSounds.Exclamation.Play();
+                    MessageBox.Show("请按序解除轨道故障区段占用！", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else if (Occupy[i] == 0)
             {
@@ -345,9 +375,17 @@ namespace CTCS_test
                 }
                 Sweep.PerformClick();
                 V = 0;
-                Xp = 200;
-                if (Type[3] == Types.ZX) Yp = 343;
-                else Yp = 262;
+                Xp = 1645;
+                if (Type[3] == Types.ZX)
+                {
+                    Yp = 343;
+                    listBox1.Items.Add("列车从甲站正线发车");
+                }
+                else
+                {
+                    Yp = 262;
+                    listBox1.Items.Add("列车从甲站侧线发车");
+                }
                 Train1.Location = new Point(Xp, Yp);
                 Suspend.Text = "暂停";
                 timer1.Enabled = true;
@@ -388,6 +426,7 @@ namespace CTCS_test
             {
                 if (Occupy[i] == -2) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
             }
+            if (StopMassage) listBox1.Items.Add("列车停车");
             listBox1.TopIndex = listBox1.Items.Count - 1;
         }
 
