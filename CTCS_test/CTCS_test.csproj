@@ -184,6 +184,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Hcode.png" />
     <Content Include="u=1622080350,3912155088&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG~2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

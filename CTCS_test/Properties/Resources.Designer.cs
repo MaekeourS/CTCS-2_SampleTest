@@ -83,6 +83,16 @@ namespace CTCS_test.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Hcode {
+            get {
+                object obj = ResourceManager.GetObject("Hcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap HUcode {
             get {
                 object obj = ResourceManager.GetObject("HUcode", resourceCulture);

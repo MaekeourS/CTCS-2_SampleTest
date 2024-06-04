@@ -19,7 +19,7 @@ namespace CTCS_test
         {
             InitializeComponent();
         }
-        enum Codes { HU, HB, UU, UUS, U, U2, U2S, LU, L, L2, L3, L4, L5 }
+        enum Codes { JC, H, HU, HB, UU, UUS, U, U2, U2S, LU, L, L2, L3, L4, L5 }
         enum Types { ZX, CX, YDZX, YDCX }
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
@@ -40,7 +40,7 @@ namespace CTCS_test
                 if (Occupy[i] == 0)
                 {
                     if (j < 8 && i != 3) j++;
-                    //if (i == 3) j--;
+                    if (i == 18 && CodeNum[19] == Codes.L5) j = 8;
                 }
                 else
                 {
@@ -48,7 +48,8 @@ namespace CTCS_test
                     Temp = i;
                 }
                 if (i == 18 && (ZXJ.Enabled && CXJ.Enabled || Xp >= 1487)) j = 0;
-                if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i)
+                if (Occupy[Temp] == -2) CodeNum[i] = Codes.H;
+                else if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i)
                     CodeNum[i] = ZXFM[j];
                 else CodeNum[i] = CXFM[j];
             }
@@ -77,6 +78,12 @@ namespace CTCS_test
         {
             switch (CodeNum[i - 1])
             {
+                case Codes.JC:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.JCcode;
+                    break;
+                case Codes.H:
+                    Controls["Code" + i].BackgroundImage = Properties.Resources.Hcode;
+                    break;
                 case Codes.HU:
                     Controls["Code" + i].BackgroundImage = Properties.Resources.HUcode;
                     break;
@@ -168,7 +175,7 @@ namespace CTCS_test
                     }
                     else if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
                     {
-                        if( V > 100)
+                        if (V > 100)
                         {
                             Brake = 1;
                             V -= Brake;
@@ -212,7 +219,6 @@ namespace CTCS_test
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text = "Speed:" + V.ToString() + "km/h";
             CodeNum[19] = Codes.HU;
 
         }
@@ -278,16 +284,26 @@ namespace CTCS_test
         {
             PictureBox PictureBox = (PictureBox)sender;
             int i = int.Parse(PictureBox.Name.Substring(4)) - 1;
-            if (Occupy[i] == -1)
+            if (Occupy[i] == -2)
             {
+                if (CodeNum[i - 1] != Codes.H)
+                {
+                    CodeNum[i - 1] = Codes.L;
+                    Occupy[i - 1] = 0;
+                }
                 CodeNum[i] = Codes.L;
                 Occupy[i] = 0;
                 listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用解除");
             }
-            else
+            else if (Occupy[i] == 0)
             {
-                CodeNum[i] = Codes.HU;
-                Occupy[i] = -1;
+                if (CodeNum[i - 1] != Codes.H)
+                {
+                    CodeNum[i - 1] = Codes.HU;
+                    Occupy[i - 1] = -1;
+                }
+                CodeNum[i] = Codes.H;
+                Occupy[i] = -2;
                 listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
             }
         }
@@ -370,7 +386,7 @@ namespace CTCS_test
             listBox1.Items.Clear();
             for (int i = 22; i >= 0; i--)
             {
-                if (Occupy[i] == -1) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
+                if (Occupy[i] == -2) listBox1.Items.Add("轨道区段" + (i + 1).ToString() + "故障占用");
             }
             listBox1.TopIndex = listBox1.Items.Count - 1;
         }
@@ -382,8 +398,8 @@ namespace CTCS_test
                 for (int i = 22; i >= 4; i--) Type[i] = Types.CX;
                 if (!Stop.Enabled)
                 {
-                    CodeNum[22] = Codes.HU;
-                    CodeNum[21] = Codes.HU;
+                    CodeNum[22] = Codes.JC;
+                    CodeNum[21] = Codes.JC;
                     CodeNum[20] = Codes.HU;
                     CodeNum[19] = Codes.HU;
                     CodeNum[2] = Codes.UU;
@@ -406,17 +422,17 @@ namespace CTCS_test
                 for (int i = 22; i >= 4; i--) Type[i] = Types.ZX;
                 if (!Stop.Enabled)
                 {
-                    CodeNum[22] = Codes.HU;
-                    CodeNum[21] = Codes.HU;
+                    CodeNum[22] = Codes.JC;
+                    CodeNum[21] = Codes.JC;
                     CodeNum[20] = Codes.HU;
                     CodeNum[19] = Codes.HU;
                 }
                 else if (!Pass.Enabled)
                 {
-                    CodeNum[22] = Codes.U;
-                    CodeNum[21] = Codes.U;
-                    CodeNum[20] = Codes.U;
-                    CodeNum[19] = Codes.U;
+                    CodeNum[22] = Codes.L5;
+                    CodeNum[21] = Codes.L5;
+                    CodeNum[20] = Codes.L5;
+                    CodeNum[19] = Codes.L5;
                 }
             }
         }
