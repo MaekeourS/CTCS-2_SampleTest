@@ -173,6 +173,7 @@ namespace CTCS_test
                             Brake = 1;
                             V -= Brake;
                         }
+                        else if (V < 60) V += 1;
                     }
                     else if ((CodeNum[i + 1] == Codes.U) || (CodeNum[i + 1] == Codes.U2) || (CodeNum[i + 1] == Codes.UU && Xp > 299))
                     {
@@ -181,6 +182,7 @@ namespace CTCS_test
                             Brake = 1;
                             V -= Brake;
                         }
+                        else if (V < 20) V += 1;
                         if (V > 200) V = 200;
                     }
                     else if (CodeNum[i + 1] == Codes.HU)
@@ -206,13 +208,13 @@ namespace CTCS_test
             {
                 Application.Restart();
             }
-            if ((CodeNum[i + 1] >= Codes.L || ((Xp < 299 || Xp > 1640 )&& CodeNum[i + 1] == Codes.UU)) && V < 250)
+            if ((CodeNum[i + 1] >= Codes.L || ((Xp < 299 || Xp > 1640) && CodeNum[i + 1] == Codes.UU)) && V < 250)
             {
                 if (V == 0)
                 {
                     if (Xp > 1640)
                     {
-                        if(Yp == 343) listBox1.Items.Add("列车从乙站正线发车");
+                        if (Yp == 343) listBox1.Items.Add("列车从乙站正线发车");
                         else listBox1.Items.Add("列车从乙站侧线发车");
                     }
                     else listBox1.Items.Add("列车出发");
@@ -220,7 +222,7 @@ namespace CTCS_test
                 }
                 V += 1;
             }
-                
+
             if (Type[3] == Types.ZX) side1 = false; else side1 = true;
             if (Type[19] == Types.ZX) side2 = false; else side2 = true;
             if (V > 250) V = 250;
@@ -230,7 +232,7 @@ namespace CTCS_test
                 timer2.Enabled = false;
                 if (!StopMassage)
                 {
-                    if(Xp > 1640) listBox1.Items.Add("列车到达乙站");
+                    if (Xp > 1640) listBox1.Items.Add("列车到达乙站");
                     else listBox1.Items.Add("列车停车");
                     StopMassage = true;
                 }
@@ -242,7 +244,6 @@ namespace CTCS_test
         private void Form1_Load(object sender, EventArgs e)
         {
             CodeNum[19] = Codes.HU;
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -369,13 +370,18 @@ namespace CTCS_test
             {
                 ZXF.Enabled = false;
                 CXF.Enabled = false;
+                if (!ZXJ.Enabled && !CXJ.Enabled)
+                {
+                    ZXJ.Enabled = true;
+                    CXJ.Enabled = true;
+                }
                 if (Depart.Text == "发车")
                 {
                     Depart.Text = "重新发车";
                 }
                 Sweep.PerformClick();
                 V = 0;
-                Xp = 1645;
+                Xp = 200;
                 if (Type[3] == Types.ZX)
                 {
                     Yp = 343;
