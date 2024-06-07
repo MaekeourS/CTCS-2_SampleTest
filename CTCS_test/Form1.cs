@@ -19,7 +19,7 @@ namespace CTCS_test
         {
             InitializeComponent();
         }
-        enum Codes { JC, H, HU, HB, UU, UUS, U, U2, U2S, LU, L, L2, L3, L4, L5 }
+        enum Codes { JC, H, HU, HB, UU, U, U2, LU, L, L2, L3, L4, L5 }
         enum Types { ZX, CX, YDZX, YDCX }
         Codes[] CodeNum = new Codes[23];
         Types[] Type = new Types[23];
@@ -35,8 +35,9 @@ namespace CTCS_test
         Codes[] CXFM = { Codes.HU, Codes.UU, Codes.U2, Codes.LU, Codes.L, Codes.L2, Codes.L3, Codes.L4, Codes.L5 };
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Train1Moving();
             int j = 0, Temp = 19;
-            for (int i = 18; i >= 0; i--)
+            for (int i = 18; i >= 2; i--)
             {
                 if (Occupy[i] == 0)
                 {
@@ -50,18 +51,17 @@ namespace CTCS_test
                 }
                 if (i == 18 && (ZXJ.Enabled && CXJ.Enabled || Xp >= 1487)) j = 0;
                 if (Occupy[Temp] == -2) CodeNum[i] = Codes.H;
-                else if (Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i)
+                else if ((i != 2 || Type[2] == Types.ZX) && Type[i] == Types.ZX || Occupy[Temp] == -1 || TrainLocation > i)
                     CodeNum[i] = ZXFM[j];
-                else CodeNum[i] = CXFM[j];
+                else if (i != 2) CodeNum[i] = CXFM[j];
             }
-            if (Type[2] == Types.CX)
+            if (Xp > 336)
             {
-                for (int i = 2; i >= 0; i--)
-                {
-                    CodeNum[i] = Codes.UU;
-                }
+                CodeNum[3] = Codes.HB;
+                CodeNum[2] = Codes.JC;
             }
-            Train1Moving();
+            CodeNum[1] = Codes.JC;
+            CodeNum[0] = Codes.JC;
             for (int i = 1; i < 24; i++)
             {
                 CodeSwitch(i);
@@ -121,7 +121,7 @@ namespace CTCS_test
         }
         private void LightSwitch(int Light, int Code)
         {
-            if (CodeNum[Code] == Codes.HU) Controls["Light" + Light].BackgroundImage = Properties.Resources.H;
+            if (CodeNum[Code] == Codes.HU || CodeNum[Code] == Codes.JC) Controls["Light" + Light].BackgroundImage = Properties.Resources.H;
             else if (CodeNum[Code] == Codes.UU) Controls["Light" + Light].BackgroundImage = Properties.Resources.UU;
             else if (CodeNum[Code] == Codes.U) Controls["Light" + Light].BackgroundImage = Properties.Resources.U;
             else if (CodeNum[Code] == Codes.U2) Controls["Light" + Light].BackgroundImage = Properties.Resources.U;
@@ -268,6 +268,9 @@ namespace CTCS_test
             CXF.Enabled = true;
             ZXF.Enabled = false;
             Suspend.Enabled = false;
+            Xp = 200;
+            Yp = 343;
+            Train1.Location = new Point(Xp, Yp);
         }
 
         private void CXF_Click(object sender, EventArgs e)
@@ -278,11 +281,14 @@ namespace CTCS_test
             CodeNum[20] = Codes.HU;
             CodeNum[19] = Codes.HU;
             CodeNum[2] = Codes.UU;
-            CodeNum[1] = Codes.UU;
-            CodeNum[0] = Codes.UU;
+            CodeNum[1] = Codes.JC;
+            CodeNum[0] = Codes.JC;
             ZXF.Enabled = true;
             CXF.Enabled = false;
             Suspend.Enabled = false;
+            Xp = 200;
+            Yp = 262;
+            Train1.Location = new Point(Xp, Yp);
         }
 
         private void ZXJ_Click(object sender, EventArgs e)

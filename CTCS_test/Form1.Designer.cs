@@ -604,7 +604,7 @@
             // 
             // Code2
             // 
-            this.Code2.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
+            this.Code2.BackgroundImage = global::CTCS_test.Properties.Resources.JCcode;
             this.Code2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code2.Location = new System.Drawing.Point(88, 454);
@@ -615,7 +615,7 @@
             // 
             // Code1
             // 
-            this.Code1.BackgroundImage = global::CTCS_test.Properties.Resources.HUcode;
+            this.Code1.BackgroundImage = global::CTCS_test.Properties.Resources.JCcode;
             this.Code1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Code1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Code1.Location = new System.Drawing.Point(12, 454);
