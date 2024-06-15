@@ -233,7 +233,7 @@ namespace CTCS_test
                 if (!StopMassage)
                 {
                     if (Xp > 1640) listBox1.Items.Add("列车到达乙站");
-                    else listBox1.Items.Add("列车停车");
+                    else if (Xp > 201) listBox1.Items.Add("列车停车");
                     StopMassage = true;
                 }
             }
@@ -329,7 +329,7 @@ namespace CTCS_test
                 else
                 {
                     SystemSounds.Exclamation.Play();
-                    MessageBox.Show("请按序解除轨道故障区段占用！", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("请按序解除轨道区段故障占用！", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else if (Occupy[i] == 0)
